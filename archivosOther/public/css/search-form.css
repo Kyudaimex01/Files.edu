@@ -1,0 +1,120 @@
+
+#header .btn-search {
+    padding-top: 8px
+}
+
+#header .btn-search [class^="icon-"], #header .btn-search [class*=" icon-"] {
+    display: block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 50%;
+    color: #fff;
+    text-align: center;
+    background-color: #e36c39;
+    -webkit-transition-property: background-color;
+    transition-property: background-color;
+    -webkit-transition-duration: 400ms;
+    transition-duration: 400ms
+}
+
+#header .btn-search [class^="icon-"]:before, #header .btn-search [class*=" icon-"]:before {
+    line-height: inherit
+}
+
+#header .btn-search [class^="icon-"]:hover, #header .btn-search [class*=" icon-"]:hover {
+    background-color: #cc511d
+}
+
+@media (max-width: 767px) {
+    #header .btn-trigger {
+        display: block
+    }
+
+    #header .btn-search, #header #menu {
+        display: none
+    }
+}
+.icon-search:before {
+    content: "j"
+}
+.widget.widget_archive .screen-reader-text, .widget.widget_categories .screen-reader-text, .widget.widget_recent_comments .screen-reader-text, .widget.widget_pages .screen-reader-text {
+    display: none
+}
+.search-dialog .cont .form .search-form > label .screen-reader-text {
+    display: none
+}
+
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute ! important;
+    width: 1px;
+    word-wrap: normal ! important
+}
+
+.widget_wpcom_social_media_icons_widget .screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden
+}
+
+.widget_wpcom_social_media_icons_widget .screen-reader-text:hover, .widget_wpcom_social_media_icons_widget .screen-reader-text:active, .widget_wpcom_social_media_icons_widget .screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000
+}
+
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden
+}
+
+.screen-reader-text:focus {
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+    clip: auto !important;
+    color: #21759b;
+    display: block;
+    font-size: 14px;
+    font-size: 0.875rem;
+    font-weight: bold;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000
+}
+
+

@@ -1,0 +1,217 @@
+img.wp-smiley, img.emoji {
+    display: inline !important;
+    border: none !important;
+    box-shadow: none !important;
+    height: 1em !important;
+    width: 1em !important;
+    margin: 0 .07em !important;
+    vertical-align: -0.1em !important;
+    background: none !important;
+    padding: 0 !important;
+}
+
+/**
+ * Table of Contents
+ *
+ * 1.0 - Pagination
+ * 2.0 - Social Media Icon
+ * 3.0 - Default Blog Template
+ * 4.0 - Classical Template
+ * 5.0 - Light Breeze Template
+ * 6.0 - Spektrum Template
+ * 7.0 - Evolution Template
+ * 8.0 - Timeline Template
+ * 9.0 - News Template
+ *
+ */
+
+/**
+ * 1.0 - Pagination
+ */
+
+.bd_pagination_box.wl_pagination_box .paging-navigation ul.page-numbers li a.page-numbers:hover,
+.bd_pagination_box.wl_pagination_box .paging-navigation ul.page-numbers li > span.current {
+    background-color: #c1c1c1;
+    color: #003770;
+}
+
+.bd_pagination_box.wl_pagination_box .paging-navigation ul.page-numbers li a.page-numbers {
+    background-color: #003770;
+    color: #c1c1c1;
+}
+
+/**
+ * 2.0 - Social Media Icon
+ */
+
+.bdp_blog_template .social-component a {
+    border-radius: 100%;
+}
+
+/**
+ * 3.0 - Default Blog Template
+ */
+
+.bdp_blog_template .bd-blog-header h2 {
+    background: #ffffff
+}
+
+.blog_template .bd-more-tag-inline {
+    color: #003770;
+}
+
+.bdp_blog_template .bd-blog-header h2 a {
+    color: #003770;
+    font-size: 30px;
+}
+
+.bd-post-content {
+    color: #444444;
+    font-size: 10px;
+}
+
+.bd-metadatabox {
+    color: #444444;
+}
+
+.bd-link-label {
+    color: #444444;
+}
+
+.bdp_blog_template a.bd-more-tag {
+    background-color: #c1c1c1;
+    color: #003770;
+}
+
+.bdp_blog_template a.bd-more-tag:hover {
+    background-color: #003770;
+    color: #c1c1c1;
+}
+
+.bd-tags,
+span.bd-category-link,
+.bdp_blog_template .bd-categories,
+.bd-meta-data-box .bd-metacats,
+.bd-meta-data-box .bd-metacats a,
+.bd-meta-data-box .bd-metacomments a,
+.bdp_blog_template .bd-categories a,
+.bd-post-content a,
+.bd-tags a,
+span.bd-category-link a,
+.bdp_blog_template a {
+    color: #003770;
+}
+
+.bd-meta-data-box .bd-metacats a:hover,
+.bd-meta-data-box .bd-metacomments a:hover,
+.bdp_blog_template .bd-categories a:hover,
+.spektrum .post-bottom .bd-categories a:hover,
+.bd-post-content a:hover,
+.bd-tags a:hover,
+span.bd-category-link a:hover,
+.bdp_blog_template a:hover,
+.bd-post-content a:hover {
+    color: #444444;
+}
+
+.bdp_blog_template.evolution,
+.bdp_blog_template.lightbreeze {
+    background: #ffffff;
+}
+
+/**
+ * 4.0 - Classical Template
+ */
+
+.bdp_blog_template.classical .bd-blog-header .bd-tags {
+    color: #003770;
+}
+
+/**
+ * 5.0 - Light Breeze Template
+ */
+
+/**
+ * 6.0 - Spektrum Template
+ */
+
+.bdp_blog_template.spektrum .bd-blog-header {
+    background: #ffffff;
+}
+
+.spektrum .date {
+    background-color: #003770;
+}
+
+.spektrum .post-bottom .bd-categories a {
+    color: #003770;
+}
+
+.spektrum .details a {
+    color: #003770;
+}
+
+.spektrum .details a:hover {
+    color: #c1c1c1;
+}
+
+/**
+ * 7.0 - Evolution Template
+ */
+
+/**
+ * 8.0 - Timeline Template
+ */
+
+.timeline_bg_wrap:before {
+    background: none repeat scroll 0 0 #003770;
+}
+
+.bd-datetime {
+    background: none repeat scroll 0 0 #003770;
+}
+
+.bdp_blog_template.timeline .post_hentry > i {
+    background: #003770;
+}
+
+.bdp_blog_template.timeline:nth-child(2n+1) .post_content_wrap:before,
+.bdp_blog_template.timeline:nth-child(2n+1) .post_content_wrap:after {
+    border-left: 8px solid #003770;
+}
+
+.bdp_blog_template.timeline:nth-child(2n) .post_content_wrap:before,
+.bdp_blog_template.timeline:nth-child(2n) .post_content_wrap:after {
+    border-right: 8px solid #003770;
+}
+
+.post_content_wrap {
+    border: 1px solid #003770;
+}
+
+.bdp_blog_template .post_content_wrap .blog_footer {
+    border-top: 1px solid #003770;
+}
+
+.bdp_blog_template .post-icon {
+    background: #ffffff;
+}
+
+.bdp_blog_template.timeline .desc a h3 {
+    color: #003770;
+    background: #ffffff;
+    font-size: 30px;
+}
+
+/**
+ * 9.0 - News Template
+ */
+
+.bdp_blog_template.news .bd-blog-header h2.title a {
+    color: #003770;
+    font-size: 30px;
+}
+
+.bdp_blog_template.news .bd-blog-header h2.title {
+    background: #ffffff
+}
