@@ -35,23 +35,15 @@
 <!-- Bootstrap CSS-->
 <link href="{{ asset('css/vendor/bootstrap-4.1/bootstrap.min.css') }}" rel="stylesheet" media="all">
 
-<!-- Vendor CSS-->
-<link href="{{ asset('css/vendor/animsition/animsition.min.css') }}" rel="stylesheet" media="all">
-<link href="{{ asset('css/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css') }}" rel="stylesheet" media="all">
-<link href="{{ asset('css/vendor/wow/animate.css') }}" rel="stylesheet" media="all">
-<link href="{{ asset('css/vendor/css-hamburgers/hamburgers.min.css') }}" rel="stylesheet" media="all">
-<link href="{{ asset('css/vendor/slick/slick.css') }}" rel="stylesheet" media="all">
-<link href="{{ asset('css/vendor/select2/select2.min.css') }}" rel="stylesheet" media="all">
-<link href="{{ asset('css/vendor/perfect-scrollbar/perfect-scrollbar.css') }}" rel="stylesheet" media="all">
 
 @section('navbar')
     <div class="title-area">
         <h1 class="site-title" itemprop="headline">
             <a class="menu-top" href="http://www.archivos.umss.edu.bo/">Universidad Mayor de San Simon</a></h1>
-        <p class="site-description" itemprop="description">Portal de la Universidad Mayor de San Simon</p>
+        <span class="site-description" itemprop="description">Portal de la Universidad Mayor de San Simon</span>
     </div>
 
-    <div class="section__content section__content--p30">
+    <div class="header-wrap2">
         <div class="container-fluid">
             <div class="header-wrap">
                 <form class="form-header" action="">
@@ -75,8 +67,42 @@
 
                     <div class="header-button">
                         <div class="noti-wrap">
-                            <div class="noti__item js-item-menu">
-                                <i class="zmdi zmdi-comment-more"></i>
+                            <script type="text/javascript">
+                                function showMessages() {
+                                    if (document.getElementById("mess-g").className == "noti__item js-item-menu"){
+                                        document.getElementById("mess-g").classList.add("show-dropdown");
+                                    }else{
+                                        document.getElementById("mess-g").classList.remove("show-dropdown");
+                                    }
+                                }
+
+                                function showMails() {
+                                    if (document.getElementById("mail-g").className == "noti__item js-item-menu"){
+                                        document.getElementById("mail-g").classList.add("show-dropdown");
+                                    }else{
+                                        document.getElementById("mail-g").classList.remove("show-dropdown");
+                                    }
+                                }
+
+                                function showNews() {
+                                    if (document.getElementById("new-g").className == "noti__item js-item-menu"){
+                                        document.getElementById("new-g").classList.add("show-dropdown");
+                                    }else{
+                                        document.getElementById("new-g").classList.remove("show-dropdown");
+                                    }
+                                }
+
+                                function showUserMenu() {
+                                    if (document.getElementById("user-g").className == "account-item clearfix js-item-menu"){
+                                        document.getElementById("user-g").classList.add("show-dropdown");
+                                    }else{
+                                        document.getElementById("user-g").classList.remove("show-dropdown");
+                                    }
+                                }
+                            </script>
+
+                            <div id="mess-g" class="noti__item js-item-menu">
+                                <a onclick="showMessages()"><i class="zmdi zmdi-comment-more"></i></a>
                                 <span class="quantity">1</span>
                                 <div class="mess-dropdown js-dropdown">
                                     <div class="mess__title">
@@ -107,8 +133,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="noti__item js-item-menu">
-                                <i class="zmdi zmdi-email"></i>
+                            <div id="mail-g" class="noti__item js-item-menu">
+                                <a onclick="showMails()"><i class="zmdi zmdi-email"></i></a>
                                 <span class="quantity">1</span>
                                 <div class="email-dropdown js-dropdown">
                                     <div class="email__title">
@@ -137,8 +163,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="noti__item js-item-menu">
-                                <i class="zmdi zmdi-notifications"></i>
+                            <div id="new-g" class="noti__item js-item-menu">
+                                <a onclick="showNews()"><i class="zmdi zmdi-notifications"></i></a>
                                 <span class="quantity">3</span>
                                 <div class="notifi-dropdown js-dropdown">
                                     <div class="notifi__title">
@@ -169,12 +195,12 @@
                             </div>
                         </div>
                         <div class="account-wrap">
-                            <div class="account-item clearfix js-item-menu">
+                            <div id="user-g" class="account-item clearfix js-item-menu">
                                 <div class="image">
-                                    <img src="images/icon/avatar-01.jpg" alt="John Doe" />
+                                    <a onclick="showUserMenu()"><img src="images/icon/avatar-01.jpg" alt="John Doe" /></a>
                                 </div>
                                 <div class="content">
-                                    <a class="js-acc-btn" href="#">{{ Auth::user()->name }}</a>
+                                    {{ Auth::user()->name }}
                                 </div>
                                 <div class="account-dropdown js-dropdown">
                                     <div class="info clearfix">
@@ -185,9 +211,9 @@
                                         </div>
                                         <div class="content">
                                             <h5 class="name">
-                                                <a href="#">john doe</a>
+                                                <a href="#">{{ Auth::user()->name }}</a>
                                             </h5>
-                                            <span class="email">johndoe@example.com</span>
+                                            <span class="email">{{ Auth::user()->email }}</span>
                                         </div>
                                     </div>
                                     <div class="account-dropdown__body">
@@ -205,8 +231,13 @@
                                         </div>
                                     </div>
                                     <div class="account-dropdown__footer">
-                                        <a href="#">
-                                            <i class="zmdi zmdi-power"></i>Logout</a>
+                                        <a class="" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();"><i class="zmdi zmdi-power"></i>Salir</a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+
                                     </div>
                                 </div>
                             </div>
@@ -219,6 +250,15 @@
 @endsection
 
 @section('saved')
+    <!-- Vendor CSS-->
+    <link href="{{ asset('css/vendor/animsition/animsition.min.css') }}" rel="stylesheet" media="all">
+    <link href="{{ asset('css/vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css') }}" rel="stylesheet" media="all">
+    <link href="{{ asset('css/vendor/wow/animate.css') }}" rel="stylesheet" media="all">
+    <link href="{{ asset('css/vendor/css-hamburgers/hamburgers.min.css') }}" rel="stylesheet" media="all">
+    <link href="{{ asset('css/vendor/slick/slick.css') }}" rel="stylesheet" media="all">
+    <link href="{{ asset('css/vendor/select2/select2.min.css') }}" rel="stylesheet" media="all">
+    <link href="{{ asset('css/vendor/perfect-scrollbar/perfect-scrollbar.css') }}" rel="stylesheet" media="all">
+
     <nav class="nav-primary" aria-label="Main" itemscope="" itemtype="https://schema.org/SiteNavigationElement">
         <div class="wrap">
             <ul id="menu-menucomercial" class="menu genesis-nav-menu"><!-- menu-primary -->
@@ -268,4 +308,10 @@
         </ul>
         </div>
         </nav>
+    <script>
+        document.getElementsByClassName("noti__item js-item-menu").addEventListener("click", showNoti);
+        function showNoti() {
+            document.getElementsByClassName("mess-dropdown js-dropdown").classList.add("show-dropdown");
+        }
+    </script>
 @endsection
