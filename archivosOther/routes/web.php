@@ -11,10 +11,6 @@ use App\Notice;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -26,12 +22,7 @@ Route::get('/header', function (){
 
 Route::get('/search','HeaderController@buscar')->name('search');
 
-Route::get('/index','NoticeController@get_index' )->name('index');
-//function (){
-//$notices = Notice::listall();
-//return view('index')->with('notices',$notices);
-
-//});
+Route::get('/','NoticeController@get_index' )->name('index');
 
 //services section
 Route::get('services', function (){

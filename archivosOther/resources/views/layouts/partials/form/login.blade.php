@@ -12,6 +12,6 @@
          <input type="checkbox" name="recordar">Recordar Contraseña
      </label> -->
     <input type="button" value="INGRESAR" id="boton">
-    </div>
+
 </form>
 @endsection

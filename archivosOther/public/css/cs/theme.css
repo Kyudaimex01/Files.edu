@@ -1488,7 +1488,7 @@ section {
     line-height: calc(20/16);
 }
 
-.account-dropdown .info .content .name a {
+.account-dropdown .info .content .name a{
     color: #333;
     font-weight: 500;
     text-transform: capitalize;
@@ -1496,6 +1496,7 @@ section {
 
 .account-dropdown .info .content .name a:hover {
     color: #666;
+    text-decoration: none;
 }
 
 .account-dropdown .info .content .email {

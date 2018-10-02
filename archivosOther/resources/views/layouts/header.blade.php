@@ -87,16 +87,7 @@
     <link rel="stylesheet" id="tablepress-default-css"
           href="{{ asset('css/default.min.css') }}" type="text/css"
           media="all">
-    <style id="tablepress-default-inline-css" type="text/css">
-        .tablepress thead th, .tablepress tfoot th {
-            background-color: #D9EDF7
-        }
 
-        .tablepress thead .sorting_asc, .tablepress thead .sorting_desc, .tablepress thead .sorting:hover {
-            background-color: #003770;
-            color: #fff
-        }
-    </style>
     <script type="text/javascript"
             src="{{ asset('js/jquery.js') }}"></script>
     <script type="text/javascript"
@@ -184,12 +175,9 @@
 <!--<script src="{{ asset('js/jquery.jscroll.min.js') }}"></script> -->
     <link href="{{ asset('css/search-form.css') }}" rel="stylesheet">
     <link href="{{ asset('css/user.css') }}" rel="stylesheet">
-<!--    <link href="{{ asset('css/prueba.css') }}" rel="stylesheet">-->
+    <link href="{{ asset('css/front.min.css') }}" rel="stylesheet">
     <style type="text/css">
         /* Button */
-        input[type="submit"],
-        input[type="reset"],
-        input[type="button"],
         button,
         .button {
             -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -212,9 +200,6 @@
             padding: 0 2.25em;
         }
 
-        input[type="submit"]:hover,
-        input[type="reset"]:hover,
-        input[type="button"]:hover,
         button:hover,
         .button:hover {
             background-color: rgb(237, 28, 36);
