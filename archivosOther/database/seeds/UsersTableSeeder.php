@@ -12,29 +12,32 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         DB::table('users')->insert([
-            'ci' => '123456789',
             'name' => 'user',
             'email' => 'user@email.com',
             'address' => 'cochabamba',
             'password' => bcrypt('user123'),
+            'phone' => '12233',
+            'profile_image' => 'http://via.placeholder.com/150*150',
             'type'=> '3',
         ]);
 
         DB::table('users')->insert([
-            'ci' => '123456780',
             'name' => 'wilson',
             'email' => 'wilson@email.com',
             'address' => 'cochabamba',
             'password' => bcrypt('wilson123'),
+            'phone' => '1223',
+            'profile_image' => 'http://via.placeholder.com/150*150',
             'type'=> '2',
         ]);
 
         DB::table('users')->insert([
-            'ci' => '111111111',
             'name' => 'admin',
             'email' => 'admin@email.com',
             'address' => 'cochabamba',
             'password' => bcrypt('admin123'),
+            'phone' => '122',
+            'profile_image' => 'http://via.placeholder.com/150*150',
             'type'=> '1',
         ]);
     }

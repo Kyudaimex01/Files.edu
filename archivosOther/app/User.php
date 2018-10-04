@@ -34,4 +34,9 @@ class User extends Authenticatable
     public function notice(){
         return $this->hasMany('App\Notice','id');
     }
+
+    public function messages()
+    {
+        return $this->hasMany(Message::class);
+    }
 }

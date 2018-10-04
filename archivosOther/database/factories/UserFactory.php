@@ -28,13 +28,13 @@ $factory->define(App\User::class, function (Faker $faker) {
 
 $factory->define(App\Message::class, function (Faker $faker) {
     do{
-        $from = rand(1,10);
-        $to = rand(1,10);
-    }while($from == $to);
+        $user_id = rand(1,10);
+        $receiver_id = rand(1,10);
+    }while($user_id == $receiver_id);
 
     return [
-        'from' => $from,
-        'to' => $to,
-        'text' => $faker->sentence,
+        'user_id' => $user_id,
+        'receiver_id' => $receiver_id,
+        'message' => $faker->sentence,
     ];
 });

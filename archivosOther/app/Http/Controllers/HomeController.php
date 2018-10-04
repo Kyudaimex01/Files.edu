@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -50,4 +51,18 @@ class HomeController extends Controller
         return view('requirements');
     }
 
+    /*FOR CHAT VIEWS*/
+    public function homeUser(){
+        return view('user.usrh');
+    }
+
+    public function private()
+    {
+        return view('user.chat');
+    }
+
+    public function users()
+    {
+        return User::all();
+    }
 }
