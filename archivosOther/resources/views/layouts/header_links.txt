@@ -1,0 +1,74 @@
+<!-- 1 -->
+//    <script type="text/javascript" async=""
+            src="{{ asset('js/analytics.js') }}"></script>
+    <script async="" src="./Portal Oficial de la Universidad Mayor de San Simón_files/saved_resource"
+            data-sumo-site-id="95e4e000fb4ee100be735d00102b71006e287600f386d000cae05000fed52000"
+            data-sumo-platform="wordpress"></script>
+<!-- 2 -->
+    <link rel="stylesheet" id="wpdm-bootstrap-css"
+          href="{{ asset('css/bootstrap.min.css') }}" type="text/css" media="all">
+    <link rel="stylesheet" id="tablepress-default-css"
+          href="{{ asset('css/default.min.css') }}" type="text/css"
+          media="all">
+
+    <script type="text/javascript"
+            src="{{ asset('js/jquery.js') }}"></script>
+//    <script type="text/javascript"
+            src="{{ asset('js/jquery-migrate.min.js') }}"></script>
+//    <script type="text/javascript"
+            src="{{ asset('js/php-date-formatter.min.js') }}"></script>
+//    <script type="text/javascript"
+            src="{{ asset('js/moment.min.js') }}"></script>
+//    <script type="text/javascript"
+            src="{{ asset('js/events-dynamic.min.js') }}"></script>
+//    <script type="text/javascript"
+            src="{{ asset('js/bootstrap-datepicker.min.js') }}"></script>
+//    <script type="text/javascript"
+            src="{{ asset('js/jquery.ba-resize.min.js') }}"></script>
+//    <script type="text/javascript"
+            src="{{ asset('js/jquery.placeholder.min.js') }}"></script>
+//    <script type="text/javascript"
+            src="{{ asset('js/tribe-events.min.js') }}"></script>
+//    <script type="text/javascript"
+            src="{{ asset('js/tribe-events-bar.min.js') }}"></script>
+    <script type="text/javascript"
+            src="{{ asset('js/bootstrap.min.js') }}"></script>
+//    <script type="text/javascript"
+            src="{{ asset('js/front.js') }}"></script>
+//    <script type="text/javascript"
+            src="{{ asset('js/chosen.jquery.min.js') }}"></script>
+
+//    <script type="text/javascript"
+            src="{{ asset('js/home.js') }}"></script>
+    <meta name="generator" content="WordPress Download Manager 2.9.77">
+    <link rel="https://api.w.org/" href="http://www.umss.edu.bo/index.php/wp-json/">
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.umss.edu.bo/xmlrpc.php?rsd">
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml"
+          href="http://www.umss.edu.bo/wp-includes/wlwmanifest.xml">
+
+
+    <meta name="tec-api-version" content="v1">
+    <meta name="tec-api-origin" content="http://www.umss.edu.bo">
+    <link rel="https://theeventscalendar.com/" href="http://www.umss.edu.bo/index.php/wp-json/tribe/events/v1/">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+//    <script async="" src="{{ asset('js/js') }}"></script>
+    <meta name="google-site-verification" content="X2IEpEZnONJXFPRrNfhd8nELj82WT6uZP1Y27OmeJ2A">
+    <meta name="google-site-verification" content="AcqF0ygTbdX_Xkp0IRP6elWqQzXlkRpkNOQaQHApWnE">
+
+<!-- 3 -->
+    <link rel="icon" href="http://www.umss.edu.bo/wp-content/uploads/2017/09/cropped-LogoBaseBlanca-32x32.png"
+          sizes="32x32">
+    <link rel="icon" href="http://www.umss.edu.bo/wp-content/uploads/2017/09/cropped-LogoBaseBlanca-192x192.png"
+          sizes="192x192">
+    <link rel="apple-touch-icon-precomposed"
+          href="http://www.umss.edu.bo/wp-content/uploads/2017/09/cropped-LogoBaseBlanca-180x180.png">
+    <meta name="msapplication-TileImage"
+          content="http://www.umss.edu.bo/wp-content/uploads/2017/09/cropped-LogoBaseBlanca-270x270.png">
+//    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_"
+            data-requiremodule="156085c5-0017-4150-b225-a731ad248f38/service"
+            src="{{ asset('js/service.js') }}"></script>
+//    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_"
+            data-requiremodule="services/services"
+            src="{{ asset('js/services.js') }}"></script>
+
+<!-- 4 -->

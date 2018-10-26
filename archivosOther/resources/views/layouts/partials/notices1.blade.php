@@ -1,12 +1,8 @@
 @section('notice')
-    <div class="container-fluid col-md-12" style="padding-top:0.5%; background-color:gray; height: 500px;">
-
-        <div>
-            <h4 style="background-color: whitesmoke">Avisos de la pagina</h4>
-        </div>
+    <div class="container-fluid col-md-12" style="padding-top:0.5%; background-color:whitesmoke; width: 99%; height: fit-content;">
 
         <div id="my-news" class="carousel slide" data-ride="carousel"
-             style="width:99%;margin-left: 0.5%;margin-right: 0.5%;background-color: whitesmoke;">
+             style="width:99%;margin-left: 0.4%;margin-right: 0.4%;background-color: none;"> <!--whitesmoke-->
 
             <!-- Indicators -->
             <ol class="carousel-indicators">
@@ -19,13 +15,13 @@
 
             <div style="height: 400px;background-color: whitesmoke" class="carousel-inner" role="listbox">
                     @foreach($notices as $notice)
-                        <div @if($notice->id=='1') class="item active" @else class="item" @endif >
+                        <div @if($notice->id_new=='1') class="item active" @else class="item" @endif >
                             <h4 class=" media-heading"> {{ $notice->title }}
                                 <small style="color: #8a6d3b">{{ $notice->created_at }}</small>
                                 <small>{{ $notice->posted_by }}</small></h4>
 
                             <p style="color: #002a80">{{ $notice->description }}</p>
-                            <img src="{{ asset('/img/cropped-Logo1.png') }}" href="#">
+                            <img src="{{ $notice->img_route }}" href="#">
                         </div>
                     @endforeach
                 </div>

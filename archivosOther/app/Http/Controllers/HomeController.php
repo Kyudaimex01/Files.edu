@@ -22,10 +22,7 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        return view('home')->with('');
-    }
+
 
     public function start(){
         return view('start');

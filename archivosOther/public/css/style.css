@@ -1232,13 +1232,13 @@ Content Area
 .front-page-4,
 .front-page-5,
 .front-page-6,
-.front-page-7 {
-	/*border-top: 54px solid transparent;
-	margin-top: -54px;
+.front-page-7{
+	border-top: 54px solid transparent;
+	margin-top: 104px;
 	-webkit-background-clip: padding-box;
 	-moz-background-clip:    padding;
 	background-clip:         padding-box;
-	position: relative;*/
+	position: relative;
 	z-index: 9;
 }
 
@@ -1254,6 +1254,7 @@ Content Area
 	-moz-background-size:    cover;
 	background-size:         cover;
 }
+
 
 .front-page-1 {
 	position: relative;
@@ -1367,7 +1368,7 @@ Content Area
 	float: left;
     margin-left: 5%;
 	width: 700px;
-    
+
 }
 
 .page .content {
@@ -1840,7 +1841,7 @@ Media Queries
 
 	.full-width-content .content {
 		  padding: 0;
-		
+
 	}
 
 	.full-width-content img.pull-left {

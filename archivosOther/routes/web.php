@@ -13,16 +13,13 @@ use App\Notice;
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('/','NoticeController@get_index' )->name('index');
 
 Route::get('/header', function (){
     return view('layouts.partials.header');
 });
 
 Route::get('/search','HeaderController@buscar')->name('search');
-
-Route::get('/','NoticeController@get_index' )->name('index');
 
 //services section
 Route::get('services', function (){
@@ -49,3 +46,7 @@ Route::post('messages', 'MessageController@sendMessage');
 Route::get('/private-messages/{user}', 'MessageController@privateMessages')->name('privateMessages');
 Route::post('/private-messages/{user}', 'MessageController@sendPrivateMessage')->name('privateMessages.store');
 ////////////////////
+
+Route::resource('notices','NoticeController');
+Route::resource('users','UserController');
+Route::resource('media','MediaController');

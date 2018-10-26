@@ -10,17 +10,12 @@
 
     <!-- All in One SEO Pack 2.7.2 by Michael Torbert of Semper Fi Web Design[140,177] -->
     <meta name="description"
-          content="Portal de la Universidad Mayor de San Simón de Bolivia, para noticias, información, facultades, pos grados e investigación internacional HAZ CLIC AQUÍ">
-    <link rel="next" href="http://www.umss.edu.bo/index.php/page/2/">
+          content="Portal de la Unidad de Archvos de la Universidad Mayor de San Simón de Bolivia, para noticias, información HAZ CLIC AQUÍ">
+    <link rel="next" href="{{asset('/')}}">
 
-    <link rel="canonical" href="http://www.umss.edu.bo/">
-    <script type="text/javascript" async=""
-            src="{{ asset('js/analytics.js') }}"></script>
-    <script async="" src="./Portal Oficial de la Universidad Mayor de San Simón_files/saved_resource"
-            data-sumo-site-id="95e4e000fb4ee100be735d00102b71006e287600f386d000cae05000fed52000"
-            data-sumo-platform="wordpress"></script>
+    <link rel="canonical" href="{{asset('/')}}">
+<!--1-->
     <script type="text/javascript" src="{{ asset('js/headscript.js') }}"></script>
-    <script async="" src="{{ asset('js/analytics.js') }}"></script>
     <!-- /all in one seo pack
     <link rel="dns-prefetch" href="http://fonts.googleapis.com/">
     <link rel="dns-prefetch" href="http://s.w.org/">
@@ -82,38 +77,7 @@
         }
 
     </style>
-    <link rel="stylesheet" id="wpdm-bootstrap-css"
-          href="{{ asset('css/bootstrap.min.css') }}" type="text/css" media="all">
-    <link rel="stylesheet" id="tablepress-default-css"
-          href="{{ asset('css/default.min.css') }}" type="text/css"
-          media="all">
-
-    <script type="text/javascript"
-            src="{{ asset('js/jquery.js') }}"></script>
-    <script type="text/javascript"
-            src="{{ asset('js/jquery-migrate.min.js') }}"></script>
-    <script type="text/javascript"
-            src="{{ asset('js/php-date-formatter.min.js') }}"></script>
-    <script type="text/javascript"
-            src="{{ asset('js/moment.min.js') }}"></script>
-    <script type="text/javascript"
-            src="{{ asset('js/events-dynamic.min.js') }}"></script>
-    <script type="text/javascript"
-            src="{{ asset('js/bootstrap-datepicker.min.js') }}"></script>
-    <script type="text/javascript"
-            src="{{ asset('js/jquery.ba-resize.min.js') }}"></script>
-    <script type="text/javascript"
-            src="{{ asset('js/jquery.placeholder.min.js') }}"></script>
-    <script type="text/javascript"
-            src="{{ asset('js/tribe-events.min.js') }}"></script>
-    <script type="text/javascript"
-            src="{{ asset('js/tribe-events-bar.min.js') }}"></script>
-    <script type="text/javascript"
-            src="{{ asset('js/bootstrap.min.js') }}"></script>
-    <script type="text/javascript"
-            src="{{ asset('js/front.js') }}"></script>
-    <script type="text/javascript"
-            src="{{ asset('js/chosen.jquery.min.js') }}"></script>
+<!-- 2 -->
     <!--[if IE]>
     <script type='text/javascript'
             src='http://www.umss.edu.bo/wp-content/plugins/wordpress-popup/assets/js/vendor/fitie/fitie.js?ver=3.0.4.2'></script>
@@ -121,39 +85,10 @@
     <script type='text/javascript'
             src='http://www.umss.edu.bo/wp-content/themes/genesis/lib/js/html5shiv.min.js?ver=3.7.3'></script>
     <![endif]-->
-    <script type="text/javascript"
-            src="{{ asset('js/home.js') }}"></script>
-    <meta name="generator" content="WordPress Download Manager 2.9.77">
-    <link rel="https://api.w.org/" href="http://www.umss.edu.bo/index.php/wp-json/">
-    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.umss.edu.bo/xmlrpc.php?rsd">
-    <link rel="wlwmanifest" type="application/wlwmanifest+xml"
-          href="http://www.umss.edu.bo/wp-includes/wlwmanifest.xml">
-
-
-    <meta name="tec-api-version" content="v1">
-    <meta name="tec-api-origin" content="http://www.umss.edu.bo">
-    <link rel="https://theeventscalendar.com/" href="http://www.umss.edu.bo/index.php/wp-json/tribe/events/v1/">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async="" src="{{ asset('js/js') }}"></script>
-    <meta name="google-site-verification" content="X2IEpEZnONJXFPRrNfhd8nELj82WT6uZP1Y27OmeJ2A">
-    <meta name="google-site-verification" content="AcqF0ygTbdX_Xkp0IRP6elWqQzXlkRpkNOQaQHApWnE">
     <style type="text/css">.site-title a {
             background: url({{ asset('img/logo-archivos-web.png')}}) no-repeat !important;
         }</style>
-    <link rel="icon" href="http://www.umss.edu.bo/wp-content/uploads/2017/09/cropped-LogoBaseBlanca-32x32.png"
-          sizes="32x32">
-    <link rel="icon" href="http://www.umss.edu.bo/wp-content/uploads/2017/09/cropped-LogoBaseBlanca-192x192.png"
-          sizes="192x192">
-    <link rel="apple-touch-icon-precomposed"
-          href="http://www.umss.edu.bo/wp-content/uploads/2017/09/cropped-LogoBaseBlanca-180x180.png">
-    <meta name="msapplication-TileImage"
-          content="http://www.umss.edu.bo/wp-content/uploads/2017/09/cropped-LogoBaseBlanca-270x270.png">
-    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_"
-            data-requiremodule="156085c5-0017-4150-b225-a731ad248f38/service"
-            src="{{ asset('js/service.js') }}"></script>
-    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_"
-            data-requiremodule="services/services"
-            src="{{ asset('js/services.js') }}"></script>
+<!-- 3 -->
     <style>@-webkit-keyframes insQ_100 {
                from {
                    outline: 1px solid transparent
@@ -176,6 +111,30 @@
     <link href="{{ asset('css/search-form.css') }}" rel="stylesheet">
     <link href="{{ asset('css/user.css') }}" rel="stylesheet">
     <link href="{{ asset('css/front.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{asset('DataTables/datatables.min.css')}}"/>
+    <script type="text/javascript" src="{{asset('DataTables/datatables.min.js')}}"></script>
+    <script type="text/javascript" class="init">
+        $(document).ready(function(){
+            $('#data').DataTable({
+                "order":[[1, "asc"]],
+                "language":{
+                    "lengthMenu": "Mostrar _MENU_ registros por pagina",
+                    "info": "Mostrando pagina _PAGE_ de _PAGES_",
+                        "infoEmpty": "No hay registros disponibles",
+                        "infoFiltered": "( Filtrado de _MAX_ registros)",
+                        "loadingRecords": "Cargando...",
+                        "processing": "procesando...",
+                        "search": "Buscar:",
+                        "zeroRecords": "No se encontraron registros coincidentes",
+                        "paginate": {
+                            "next": "Siguiente",
+                            "previous": "Anterior"
+                        },
+
+                }
+            })
+        });
+    </script>
     <style type="text/css">
         /* Button */
         button,
@@ -223,7 +182,6 @@
 
     </style>
 
-
 </head>
 <body class="home blog tribe-js wp-featherlight-captions custom-header header-image header-full-width full-width-content secondary-nav front-page featured-section"
       itemscope="" style=""><!--itemtype="https://schema.org/WebPage" -->
@@ -258,27 +216,6 @@
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3589">
                                     <a class="menu-top" href="{{ 'other' }}" href="http://www.umss.edu.bo/index.php/auditoria/" itemprop="url"><span
                                                 itemprop="name">Otros</span></a></li>
-                                <li id="menu-item-1872"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1872">
-                                    <a class="menu-top" itemprop="url"><span itemprop="name">Documentos</span></a>
-                                    <ul class="sub-menu">
-                                        <li id="menu-item-8055"
-                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8055">
-                                            <a class="menu-top" target="_blank"
-                                               href="http://www.umss.edu.bo/wp-content/uploads/2017/05/Plan-de-Desarrollo-UMSS-2014-2019.pdf"
-                                               itemprop="url"><span
-                                                        itemprop="name">Plan de Desarrollo 2014 – 2019</span></a></li>
-                                        <li id="menu-item-8058"
-                                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8058">
-                                            <a class="menu-top" target="_blank"
-                                               href="http://www.umss.edu.bo/wp-content/uploads/2017/05/Estatuto-Org%C3%A1nico-de-la-UMSS.pdf"
-                                               itemprop="url"><span itemprop="name">Estatuto Orgánico</span></a></li>
-                                    </ul>
-                                </li>
-                                <li id="menu-item-1155"
-                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1155"><a
-                                            class="menu-top" href="http://www.umss.edu.bo/index.php/mapa-del-campus/"
-                                            itemprop="url"><span itemprop="name">Mapa del Campus</span></a></li>
                                 <li id="menu-item-1156"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1156">
                                     <a class="menu-top" itemprop="url"><span itemprop="name"><i class="fa fa-user"></i><span
@@ -297,19 +234,12 @@
                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8117">
                             <a class="menu-top" itemprop="url"><span itemprop="name"><i class="fa fa-flask"></i><span
                                             class="fontawesome-text"> Galeria</span></span></a>
-                            <ul class="sub-menu">
-                                <li id="menu-item-8118"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8118"><a
-                                            class="menu-top" target="_blank"
-                                            href="http://search.ebscohost.com/login.aspx?direct=true&amp;site=eds-live&amp;scope=site&amp;type=0&amp;groupid=main&amp;profid=edsmain&amp;mode=bool&amp;lang=es&amp;authtype=ip,uid&amp;bquery=hola"
-                                            itemprop="url"><span itemprop="name">Editorial EBSCO</span></a></li>
-                            </ul>
-                        </li>
+                            </li>
                         <li id="menu-item-1196"
                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1196"><a
                                     class="menu-top" target="_blank" href="http://www.umss.edu.bo/index.php/blog/" itemprop="url"><span
                                         itemprop="name"><i class="fa fa-users"></i><span
-                                            class="fontawesome-text"> Blog</span></span></a></li>
+                                            class="fontawesome-text"> Consultas</span></span></a></li>
                         <li id="menu-item-8147"
                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8147">
                             <a class="menu-top" itemprop="url"><span itemprop="name"><i class="fa fa-cogs"></i><span
@@ -325,21 +255,6 @@
                                             class="menu-top" target="_blank" href="http://www.sitra.umss.edu.bo/consulta/consulta"
                                             itemprop="url"><span itemprop="name"><i class="fa fa-folder-open"></i><span
                                                     class="fontawesome-text"> SItra</span></span></a></li>
-                                <li id="menu-item-8149"
-                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8149">
-                                    <a class="menu-top" href="http:/#" itemprop="url"><span itemprop="name">Multimedia</span></a>
-                                    <ul class="sub-menu">
-                                        <li id="menu-item-8150"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8150">
-                                            <a class="menu-top" href="http://www.umss.edu.bo/index.php/videos-umss/" itemprop="url"><span
-                                                        itemprop="name">Vídeos UMSS</span></a></li>
-                                        <li id="menu-item-8153"
-                                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8153">
-                                            <a class="menu-top" href="http://www.umss.edu.bo/index.php/aniversario-umss-2017/"
-                                               itemprop="url"><span itemprop="name">Aniversario UMSS 2017</span></a>
-                                        </li>
-                                    </ul>
-                                </li>
                             </ul>
                         </li>
                         <li id="menu-item-8146"

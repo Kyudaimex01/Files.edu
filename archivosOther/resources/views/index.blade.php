@@ -14,18 +14,11 @@
                                             <div class="textwidget custom-html-widget">
                                                 <div id="letra">
                                                     <div class="row" align="center">
-
-                                                        <h1 style="text-align: center; " id="SombraTitulo">Unidad de Archivos UMSS</h1>
-
+                                                        <h1 style="margin-rigth:30%;margin-left:30%" id="SombraTitulo">Unidad de Archivos UMSS</h1>
                                                     <!--finrow-->
                                                     </div>
                                                 </div>
-                                                <div>
-                                                    @include('layouts.partials.notices1')
-                                                    @yield('notice')
-                                                </div>
-                                                    <br>
-                                                <div>
+                                                <div >
                                                     @include('layouts.partials.pictures')
                                                     @yield('picture')
                                                 </div>
@@ -44,7 +37,16 @@
                                     <section id="custom_html-11" class="widget_text widget widget_custom_html">
                                         <div class="widget_text widget-wrap">
                                             <div class="textwidget custom-html-widget">
-
+                                                <div id="letra">
+                                                        <div class="row" align="center">
+                                                        <h1 style="margin-rigth:30%;margin-left:30%" id="SombraTitulo">Noticias de la Pagina</h1>
+                                                        <!--finrow-->
+                                                    </div>
+                                                </div>
+                                                <div >
+                                                    @include('layouts.partials.notices1')
+                                                    @yield('notice')
+                                                </div>
                                             </div>
                                         </div>
                                     </section>
@@ -55,28 +57,4 @@
                 </main>
             </div>
         </div>
-@endsection
-
-@section('pictur')
-    <div class="col-md-6">
-        <h1>Hi</h1>
-    </div>
-
-    <div class="col-md-6">
-        <div class="col-md-3" style="padding-top:1%">
-            <a href="https://www.facebook.com/UmssBolOficial/">
-                <img class="ImgZoom"
-                     src="./Portal Oficial de la Universidad Mayor de San Simón_files/Aviso-Reincorporaciones-2-2-2018.jpg"
-                     width="100%">
-            </a>
-        </div>
-
-        <div class="col-md-3" style="padding-top:1%">
-            <a href="https://www.facebook.com/UmssBolOficial/">
-                <img class="ImgZoom"
-                     src="./Portal Oficial de la Universidad Mayor de San Simón_files/Aviso-Facultad-de-Economia.jpg"
-                     width="100%">
-            </a>
-        </div>
-    </div>
 @endsection
