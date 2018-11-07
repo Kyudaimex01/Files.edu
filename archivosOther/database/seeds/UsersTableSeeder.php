@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use Caffeinated\Shinobi\Models\Role;
 
 class UsersTableSeeder extends Seeder
 {
@@ -37,5 +38,12 @@ class UsersTableSeeder extends Seeder
             'phone' => '122',
             'profile_image' => 'http://via.placeholder.com/150*150',
         ]);
+
+        Role::create([
+        	'name'		=> 'Admin',
+        	'slug'  	=> 'slug',
+        	'special' 	=> 'all-access'
+        ]);
+
     }
 }
