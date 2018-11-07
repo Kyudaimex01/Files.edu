@@ -14,9 +14,9 @@ class ComposerStaticInitdac7e5f314267eeecec917a630369ba8
         '2c102faa651ef8ea5874edb585946bce' => __DIR__ . '/..' . '/swiftmailer/swiftmailer/lib/swift_required.php',
         'f0906e6318348a765ffb6eb24e0d0938' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Foundation/helpers.php',
         '58571171fd5812e6e447dce228f52f4d' => __DIR__ . '/..' . '/laravel/framework/src/Illuminate/Support/helpers.php',
-        '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
-        '3109cb1a231dcd04bee1f9f620d46975' => __DIR__ . '/..' . '/paragonie/sodium_compat/autoload.php',
         '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+        '3109cb1a231dcd04bee1f9f620d46975' => __DIR__ . '/..' . '/paragonie/sodium_compat/autoload.php',
+        '801c31d8ed748cfa537fa45402288c95' => __DIR__ . '/..' . '/psy/psysh/src/functions.php',
         'f18cc91337d49233e5754e93f3ed9ec3' => __DIR__ . '/..' . '/laravelcollective/html/src/helpers.php',
     );
 
@@ -107,6 +107,7 @@ class ComposerStaticInitdac7e5f314267eeecec917a630369ba8
             'Cron\\' => 5,
             'Collective\\Html\\' => 16,
             'Carbon\\' => 7,
+            'Caffeinated\\Shinobi\\' => 20,
         ),
         'A' => 
         array (
@@ -118,8 +119,8 @@ class ComposerStaticInitdac7e5f314267eeecec917a630369ba8
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'XdgBaseDir\\' => 
         array (
@@ -285,6 +286,10 @@ class ComposerStaticInitdac7e5f314267eeecec917a630369ba8
         array (
             0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
         ),
+        'Caffeinated\\Shinobi\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/caffeinated/shinobi/src',
+        ),
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
@@ -353,7 +358,6 @@ class ComposerStaticInitdac7e5f314267eeecec917a630369ba8
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
-        'App\\Level' => __DIR__ . '/../..' . '/app/Level.php',
         'App\\Media' => __DIR__ . '/../..' . '/app/Media.php',
         'App\\Message' => __DIR__ . '/../..' . '/app/Message.php',
         'App\\Notice' => __DIR__ . '/../..' . '/app/Notice.php',
@@ -363,6 +367,15 @@ class ComposerStaticInitdac7e5f314267eeecec917a630369ba8
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\User' => __DIR__ . '/../..' . '/app/User.php',
+        'Caffeinated\\Shinobi\\Facades\\Shinobi' => __DIR__ . '/..' . '/caffeinated/shinobi/src/Facades/Shinobi.php',
+        'Caffeinated\\Shinobi\\Middleware\\UserHasPermission' => __DIR__ . '/..' . '/caffeinated/shinobi/src/Middleware/UserHasPermission.php',
+        'Caffeinated\\Shinobi\\Middleware\\UserHasRole' => __DIR__ . '/..' . '/caffeinated/shinobi/src/Middleware/UserHasRole.php',
+        'Caffeinated\\Shinobi\\Models\\Permission' => __DIR__ . '/..' . '/caffeinated/shinobi/src/Models/Permission.php',
+        'Caffeinated\\Shinobi\\Models\\Role' => __DIR__ . '/..' . '/caffeinated/shinobi/src/Models/Role.php',
+        'Caffeinated\\Shinobi\\Shinobi' => __DIR__ . '/..' . '/caffeinated/shinobi/src/Shinobi.php',
+        'Caffeinated\\Shinobi\\ShinobiServiceProvider' => __DIR__ . '/..' . '/caffeinated/shinobi/src/ShinobiServiceProvider.php',
+        'Caffeinated\\Shinobi\\Traits\\PermissionTrait' => __DIR__ . '/..' . '/caffeinated/shinobi/src/Traits/PermissionTrait.php',
+        'Caffeinated\\Shinobi\\Traits\\ShinobiTrait' => __DIR__ . '/..' . '/caffeinated/shinobi/src/Traits/ShinobiTrait.php',
         'Carbon\\Carbon' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Carbon.php',
         'Carbon\\CarbonInterval' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/CarbonInterval.php',
         'Carbon\\Exceptions\\InvalidDateException' => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon/Exceptions/InvalidDateException.php',
