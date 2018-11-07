@@ -25,7 +25,7 @@ $factory->define(App\User::class, function (Faker $faker) {
         'type' => $faker -> numberBetween(1,3),
     ];
 });
-
+/**
 $factory->define(App\Message::class, function (Faker $faker) {
     do{
         $user_id = rand(1,10);
@@ -38,3 +38,4 @@ $factory->define(App\Message::class, function (Faker $faker) {
         'message' => $faker->sentence,
     ];
 });
+*/

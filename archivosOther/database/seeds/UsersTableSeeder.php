@@ -18,7 +18,6 @@ class UsersTableSeeder extends Seeder
             'password' => bcrypt('user123'),
             'phone' => '12233',
             'profile_image' => 'http://via.placeholder.com/150*150',
-            'type'=> '3',
         ]);
 
         DB::table('users')->insert([
@@ -28,7 +27,6 @@ class UsersTableSeeder extends Seeder
             'password' => bcrypt('wilson123'),
             'phone' => '1223',
             'profile_image' => 'http://via.placeholder.com/150*150',
-            'type'=> '2',
         ]);
 
         DB::table('users')->insert([
@@ -38,7 +36,6 @@ class UsersTableSeeder extends Seeder
             'password' => bcrypt('admin123'),
             'phone' => '122',
             'profile_image' => 'http://via.placeholder.com/150*150',
-            'type'=> '1',
         ]);
     }
 }
