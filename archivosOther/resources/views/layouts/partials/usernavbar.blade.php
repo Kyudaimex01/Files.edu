@@ -252,7 +252,7 @@
 
                                         <div class="account-wrap">
                                             <div id="user-g" class="account-item clearfix js-item-menu">
-                                                <div >
+                                                <div>
                                                     <a onclick="showUserMenu()"><img src="images/icon/avatar-01.jpg" alt="John Doe" style="width: 50px;border-radius: 50%" /></a>
                                                     {{ Auth::user()->name }}
                                                 </div>
@@ -274,14 +274,6 @@
                                                         <div class="account-dropdown__item">
                                                             <a href="#">
                                                                 <i class="zmdi zmdi-account"></i>Account</a>
-                                                        </div>
-                                                        <div class="account-dropdown__item">
-                                                            <a href="#">
-                                                                <i class="zmdi zmdi-settings"></i>Setting</a>
-                                                        </div>
-                                                        <div class="account-dropdown__item">
-                                                            <a href="#">
-                                                                <i class="zmdi zmdi-money-box"></i>Billing</a>
                                                         </div>
                                                     </div>
                                                     <div class="account-dropdown__footer">

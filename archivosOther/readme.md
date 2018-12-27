@@ -7,6 +7,90 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
+## About This project
+
+## About Shinobi
+
+Installation
+Shea Lewis (Kai) edited this page on 21 Jun 2017 · 9 revisions
+Begin by installing the package through Composer. The best way to do this is through your terminal via Composer itself:
+
+composer require caffeinated/shinobi
+Once this operation is complete, simply add the service provider to your project's config/app.php file and run the provided migrations against your database.
+
+Service Provider
+
+Caffeinated\Shinobi\ShinobiServiceProvider::class,
+
+Facade
+
+'Shinobi' => Caffeinated\Shinobi\Facades\Shinobi::class,
+
+Then open the Kernel.php file in app\Http\Kernel.php and add this to user it as middleware :
+
+Middleware
+
+Shinobi provides middleware that you may assign to specific routes in your application. To register, simply append the following middleware to your app/Http/Kernel.php file under the $routeMiddleware property.
+
+ 'has.role' => \Caffeinated\Shinobi\Middleware\UserHasRole::class,
+ 'has.permission' => \Caffeinated\Shinobi\Middleware\UserHasPermission::class,
+
+Migrations
+
+You'll need to run the provided migrations against your database. Publish the migration files using the vendor:publish Artisan command and run migrate:
+
+php artisan vendor:publish --provider="Caffeinated\Shinobi\ShinobiServiceProvider"
+php artisan migrate
+
+Example User Model
+<?php
+
+namespace App;
+
+use Caffeinated\Shinobi\Traits\ShinobiTrait;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+
+class User extends Authenticatable
+{
+    use Notifiable, ShinobiTrait;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name', 'email', 'password',
+    ];
+
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'password', 'remember_token',
+    ];
+}
+
+## About storage
+
+The Public Disk
+The public disk is intended for files that are going to be publicly accessible. By default, the public disk uses the local driver and stores these files in  storage/app/public. To make them accessible from the web, you should create a symbolic link from public/storage to storage/app/public. This convention will keep your publicly accessible files in one directory that can be easily shared across deployments when using zero down-time deployment systems like Envoyer.
+
+To create the symbolic link, you may use the storage:link Artisan command:
+
+php artisan storage:link
+
+Of course, once a file has been stored and the symbolic link has been created, you can create a URL to the files using the asset helper:
+
+echo asset('storage/file.txt');
+
+## About Pusher
+
+https://pusher.com/
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:

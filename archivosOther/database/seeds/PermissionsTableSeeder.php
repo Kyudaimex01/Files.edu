@@ -13,7 +13,7 @@ class PermissionsTableSeeder extends Seeder
      */
     public function run()
     {
-        //Users
+        //Permisos de Administracion de Usuarios
         Permission::create([
             'name'          => 'Navegar usuarios',
             'slug'          => 'users.index',
@@ -38,7 +38,7 @@ class PermissionsTableSeeder extends Seeder
             'description'   => 'Podría eliminar cualquier usuario del sistema',
         ]);
 
-        //Roles
+        //Permisos de Administracion de Roles
         Permission::create([
             'name'          => 'Navegar roles',
             'slug'          => 'roles.index',
@@ -69,7 +69,7 @@ class PermissionsTableSeeder extends Seeder
             'description'   => 'Podría eliminar cualquier rol del sistema',
         ]);
 
-        //Roles
+        //Permisos de Administracion de noticias
         Permission::create([
             'name'          => 'Navegar productos',
             'slug'          => 'products.index',
@@ -77,27 +77,58 @@ class PermissionsTableSeeder extends Seeder
         ]);
 
         Permission::create([
-            'name'          => 'Ver detalle de un producto',
-            'slug'          => 'products.show',
-            'description'   => 'Ve en detalle cada producto del sistema',
+            'name'          => 'Ver detalle de una noticia',
+            'slug'          => 'notices.show',
+            'description'   => 'Ve en detalle cada noticia del sistema',
         ]);
 
         Permission::create([
-            'name'          => 'Creación de productos',
-            'slug'          => 'products.create',
-            'description'   => 'Podría crear nuevos productos en el sistema',
+            'name'          => 'Creación de noticias',
+            'slug'          => 'notices.create',
+            'description'   => 'Podría crear nuevas noticias en el sistema',
         ]);
 
         Permission::create([
-            'name'          => 'Edición de productos',
-            'slug'          => 'products.edit',
-            'description'   => 'Podría editar cualquier dato de un producto del sistema',
+            'name'          => 'Edición de noticias',
+            'slug'          => 'notices.edit',
+            'description'   => 'Podría editar cualquier dato de una noticia del sistema',
         ]);
 
         Permission::create([
-            'name'          => 'Eliminar productos',
-            'slug'          => 'products.destroy',
-            'description'   => 'Podría eliminar cualquier producto del sistema',
+            'name'          => 'Eliminar noticias',
+            'slug'          => 'notices.destroy',
+            'description'   => 'Podría eliminar cualquier noticias del sistema',
+        ]);
+
+        //Permisos de Administracion de Contenido multimedia
+        Permission::create([
+            'name'          => 'Navegar en el contenido multimedia',
+            'slug'          => 'media.index',
+            'description'   => 'Lista y navega todos los productos del sistema',
+        ]);
+
+        Permission::create([
+            'name'          => 'Ver detalle de un contenido multimedia',
+            'slug'          => 'media.show',
+            'description'   => 'Ve en detalle cada contenido multimedia del sistema',
+        ]);
+
+        Permission::create([
+            'name'          => 'Creación de contenido multimedia',
+            'slug'          => 'media.create',
+            'description'   => 'Podría crear nuevo contenido multimedia en el sistema',
+        ]);
+
+        Permission::create([
+            'name'          => 'Edición de contenido multimedia',
+            'slug'          => 'media.edit',
+            'description'   => 'Podría editar cualquier dato de un contenido multimedia del sistema',
+        ]);
+
+        Permission::create([
+            'name'          => 'Eliminar contenido multimedia',
+            'slug'          => 'media.destroy',
+            'description'   => 'Podría eliminar cualquier contenido multimedia del sistema',
         ]);
     }
 }

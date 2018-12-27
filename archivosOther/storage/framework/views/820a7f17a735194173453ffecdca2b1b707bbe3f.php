@@ -8,6 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portal Oficial de la Unidad de Archivos</title>
 
+    <script type="text/javascript">
+        $(document).on('ready', function(){
+               setTimeout(autoloaded, 1000); //Se llamará cada 5 segundos y se refrescarán los datos de dicha tabla que se cargan mediante la función LOAD de JQuery.
+        });
+
+        function refrescarPagina(){
+            $('#autoloaded').load('header', function(){
+                   //Realizar las funciones pertinentes
+            });
+        }
+    </script>
+
     <!-- All in One SEO Pack 2.7.2 by Michael Torbert of Semper Fi Web Design[140,177] -->
     <meta name="description"
           content="Portal de la Unidad de Archvos de la Universidad Mayor de San Simón de Bolivia, para noticias, información HAZ CLIC AQUÍ">
@@ -185,7 +197,7 @@
 </head>
 <body class="home blog tribe-js wp-featherlight-captions custom-header header-image header-full-width full-width-content secondary-nav front-page featured-section"
       itemscope="" style=""><!--itemtype="https://schema.org/WebPage" -->
-<div class="site-container">
+<div class="site-container" id="autoloaded">
     <header class="site-header" itemscope=""> <!-- itemtype="https://schema.org/WPHeader" -->
         <div class="wrap">
             <nav class="nav-secondary" aria-label="Secondary" itemscope="">
@@ -194,7 +206,7 @@
                     <ul id="menu-menuinstitucionaltop" class="menu genesis-nav-menu menu-secondary">
                         <li id="menu-item-5137"
                             class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-5137">
-                            <a class="menu-top" href="http://archivos.umss.edu.bo/" itemprop="url"><span itemprop="name"><i
+                            <a class="menu-top" href="<?php echo e('/'); ?>" itemprop="url"><span itemprop="name"><i
                                             class="fa fa-bars"></i><span class="fontawesome-text"> Inicio</span></span></a>
                         </li>
                         <li id="menu-item-859"
@@ -209,16 +221,16 @@
                                 </li>
                                 <li id="menu-item-2017"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2017">
-                                    <a class="menu-top" href="<?php echo e('certificate'); ?>" itemprop="url"><span itemprop="name">Certificaciones</span></a>
+                                    <a class="menu-top" href="<?php echo e('certification'); ?>" itemprop="url"><span itemprop="name">Certificaciones</span></a>
 
                                 </li>
                                 <li id="menu-item-3589"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3589">
-                                    <a class="menu-top" href="<?php echo e('other'); ?>" href="http://www.umss.edu.bo/index.php/auditoria/" itemprop="url"><span
-                                                itemprop="name">Otros</span></a></li>
+                                    <a class="menu-top" href="<?php echo e('apostille'); ?>" href="<?php echo e('apostille'); ?>" itemprop="url"><span
+                                                itemprop="name">Apostilla</span></a></li>
                                 <li id="menu-item-1156"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1156">
-                                    <a class="menu-top" itemprop="url"><span itemprop="name"><i class="fa fa-user"></i><span
+                                    <a class="menu-top" href="<?php echo e('guide'); ?>" itemprop="url"><span itemprop="name"><i class="fa fa-user"></i><span
                                                     class="fontawesome-text"> Guia Tramite</span></span></a>
 
                                 </li>
@@ -235,11 +247,22 @@
                             <a class="menu-top" itemprop="url"><span itemprop="name"><i class="fa fa-flask"></i><span
                                             class="fontawesome-text"> Galeria</span></span></a>
                             </li>
-                        <li id="menu-item-1196"
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1196"><a
-                                    class="menu-top" target="_blank" href="http://www.umss.edu.bo/index.php/blog/" itemprop="url"><span
-                                        itemprop="name"><i class="fa fa-users"></i><span
-                                            class="fontawesome-text"> Consultas</span></span></a></li>
+                        <li id="menu-item-8147"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8147">
+                            <a class="menu-top" href="http://www.umss.edu.bo/index.php/contacto/" itemprop="url"><span
+                                itemprop="name"><i class="fa fa-comments"></i><span class="fontawesome-text"> Contacto</span></span></a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-1196"
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1196">
+                                    <a class="menu-top" target="_blank" href="http://www.umss.edu.bo/index.php/blog/" itemprop="url">
+                                        <span itemprop="name"><i class="fa fa-users"></i><span class="fontawesome-text"> Consultas</span></span></a></li>
+                                <li id="menu-item-8148"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8148"><a
+                                            class="menu-top" target="_blank" href="http://www.sitra.umss.edu.bo/consulta/consulta"
+                                            itemprop="url"><span itemprop="name"><i class="fa fa-folder-open"></i><span
+                                                    class="fontawesome-text"> SItra</span></span></a></li>
+                            </ul>
+                        </li>
                         <li id="menu-item-8147"
                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8147">
                             <a class="menu-top" itemprop="url"><span itemprop="name"><i class="fa fa-cogs"></i><span
@@ -257,20 +280,17 @@
                                                     class="fontawesome-text"> SItra</span></span></a></li>
                             </ul>
                         </li>
-                        <li id="menu-item-8146"
-                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8146"><a
-                                    class="menu-top" href="http://www.umss.edu.bo/index.php/contacto/" itemprop="url"><span
-                                        itemprop="name"><i class="fa fa-comments"></i><span class="fontawesome-text"> Contacto</span></span></a>
-                        </li>
                     </ul>
                 </div>
             </nav>
-            <?php echo $__env->make('layouts.partials.usernavbar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-            <?php echo $__env->yieldContent('navbar'); ?>
+
         </div>
+        <?php echo $__env->make('layouts.partials.usernavbar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        <?php echo $__env->yieldContent('navbar'); ?>
     </header>
-    <?php echo $__env->yieldContent('content'); ?>
+
 </div>
+<?php echo $__env->yieldContent('content'); ?>
 </body>
 <footer class="site-footer" itemscope="" itemtype="https://schema.org/WPFooter">
     <div class="wrap">

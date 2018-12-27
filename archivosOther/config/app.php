@@ -161,7 +161,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Caffeinated\Shinobi\ShinobiServiceProvider::class,
-
+        MaddHatter\LaravelFullcalendar\ServiceProvider::class,
     ],
 
     /*

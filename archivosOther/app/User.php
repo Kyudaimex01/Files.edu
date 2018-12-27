@@ -27,13 +27,10 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-/**
-    public function level(){
-        return $this->hasOne('App\Level','lvl_id');
-    }
-*/
+
     public function notice(){
-        return $this->hasMany('App\Notice','id');
+        /* return $this->hasMany('App\Notice','id_new'); */
+        return $this->hasMany(Notice::class);
     }
 
     public function messages()

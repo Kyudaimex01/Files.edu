@@ -18,6 +18,13 @@ Route::get('/','NoticeController@get_index' )->name('index');
 Route::get('/header', function (){
     return view('layouts.partials.header');
 });
+Route::get('/app', function(){
+    return view('layouts.app');
+});
+
+Route::get('login','NoticeController@get_index' )->name('login');
+
+Route::get('/home', 'NoticeController@get_home')->name('home');
 
 Route::get('/search','HeaderController@buscar')->name('search');
 
@@ -25,16 +32,19 @@ Route::get('/search','HeaderController@buscar')->name('search');
 Route::get('services', function (){
     return view('services');
 });
-Route::get('legalization', function (){
-    return view('legalization');
-});
-Route::get('certificate', function (){
-    return view('certificate');
-});
+Route::get('legalization', 'CertificationController@get_legalizations');
+Route::get('certification', 'CertificationController@get_certifications');
+Route::get('apostille', 'CertificationController@get_apostille');
 Route::get('other', function (){
     return view('other');
 });
-
+Route::get('guide', function (){
+    return view('procedure_guide');
+});
+Route::get('history', function (){
+    return view('history');
+});
+Route::get('fullcalendar', 'EventController@index');
 ///////////////////NEW ADDED FOR CHAT//////////
 Route::get('/husr', 'HomeController@homeUser')->name('husr');
 
@@ -46,7 +56,19 @@ Route::post('messages', 'MessageController@sendMessage');
 Route::get('/private-messages/{user}', 'MessageController@privateMessages')->name('privateMessages');
 Route::post('/private-messages/{user}', 'MessageController@sendPrivateMessage')->name('privateMessages.store');
 ////////////////////
+///calendar demo
+Route::get('/calend', function(){
+    return view('layouts.partials.calendar');
+});
+
+Route::group(['middleware' => 'auth'], function () {
 
 Route::resource('notices','NoticeController');
 Route::resource('users','UserController');
 Route::resource('media','MediaController');
+Route::resource('roles','RoleController');
+
+Route::resource('certifications','CertificationController');
+Route::resource('procedures','ProcedureController');
+
+});

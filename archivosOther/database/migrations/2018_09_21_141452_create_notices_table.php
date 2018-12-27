@@ -17,9 +17,11 @@ class CreateNoticesTable extends Migration
             $table->increments('id_new');
             $table->string('title');
             $table->string('description');
-            $table->string('posted_by');
             $table->string('img_route');
             $table->timestamps();
+            $table->date('expirated_at')->nullable();
+            $table->integer('posted_by')->unsigned();
+            $table->foreign('posted_by')->references('id')->on('users');
         });
     }
 

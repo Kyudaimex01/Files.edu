@@ -8,15 +8,45 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
 use function Psy\debug;
 use DB;
+use App\Event;
+use MaddHatter\LaravelFullcalendar\Facades\Calendar;
 
 class NoticeController extends Controller
 {
     public $restful=true;
 
     public function get_index(){
+        $events = [];
+        $data = Event::all();
+        if($data->count()) {
+            foreach ($data as $key => $value) {
+                $events[] = Calendar::event(
+                    $value->title,
+                    true,
+                    new \DateTime($value->start_date),
+                    new \DateTime($value->end_date.' +1 day'),
+                    null,
+                    // Add color and link on event
+                    [
+                        'color' => '#ff0000',
+                        'url' => 'pass here url and any route',
+                    ]
+                );
+            }
+        }
+        $calendar = Calendar::addEvents($events);
+
         return view('index')
             ->with('title','Index')
-            ->with('notices', Notice::all()->sortBy('updated_at'))
+            ->with('calendar', $calendar)
+            ->with('notices', Notice::orderBy('updated_at')->get())
+            ->with('size', Notice::all()->count());
+    }
+
+    public function get_home(){
+        return view('home1')
+            ->with('title','Home')
+            ->with('notices', Notice::orderBy('updated_at')->get())
             ->with('size', Notice::all()->count());
     }
 
@@ -27,9 +57,11 @@ class NoticeController extends Controller
      */
     public function index()
     {
-	    $notices = Notice::orderBy('id_new')->get();
-        return view('news.index', ['notices' => $notices]);
+        $notices = Notice::orderBy('id_new')->get();
+
+        return view('news.index', ['notices' => $notices ]);
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -172,13 +204,16 @@ class NoticeController extends Controller
         //update news
         $new = DB::table('notices')->where('id_new', $id);
         $aux = $new->first();
-        if($request->hasFile('img_route')){
-            Storage::delete('public/news/'. $aux->img_route);
+        if($request->hasFile('profile_image')){
+            Storage::delete('public/profileImages/'. $aux->profile_image);
             $notice = $new->update(['title'=>$request->input('title'),
-                'description'=>$request->input('description'),'posted_by'=>$request->input('posted_by'),'img_route'=> $fileNameToStore]);
+                'description'=>$request->input('description'),
+                'posted_by'=>$request->input('posted_by'),
+                'profile_image'=> $fileNameToStore]);
         }else{
             $notice = $new->update(['title'=>$request->input('title'),
-                'description'=>$request->input('description'),'posted_by'=>$request->input('posted_by')]);
+                'description'=>$request->input('description'),
+                'posted_by'=>$request->input('posted_by')]);
         }
         $aux = DB::table('notices')->where('id_new', $id)->first();
 	    Session::flash('message', 'Se actualiz&oacute; ' . $aux->title .' correctamente');
@@ -193,6 +228,7 @@ class NoticeController extends Controller
      */
     public function destroy($id)
     {
+        dd($id);
         $new = DB::table('notices')->where('id_new',$id)->first();
         $notice = DB::delete('delete from notices where id_new = ?',[$id]);
 

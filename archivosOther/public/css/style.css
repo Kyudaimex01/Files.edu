@@ -912,7 +912,7 @@ Site Header
 .site-header {
 	background-color: #ffffff;
 	left: 0;
-	position: fixed;
+	position: relative;
 	top: 0;
 	width: 100%;
 	z-index: 999;
