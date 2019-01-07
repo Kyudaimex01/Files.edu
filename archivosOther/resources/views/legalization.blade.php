@@ -1,6 +1,6 @@
 @extends('layouts.header')
 @section('content')
-    <div class="site-inner" >
+    <div class="site-innner" >
         <div class="content-sidebar-wrap">
             <main class="content">
                 <div style="position: relative;padding-top: 75px;" >

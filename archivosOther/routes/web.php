@@ -34,6 +34,12 @@ Route::get('certificate', function (){
 Route::get('other', function (){
     return view('other');
 });
+//ruta de galeria de imagenes
+Route::resource('imagen', 'imagesController');
+//ruta de audio
+Route::resource('audios', 'AudioController');
+//ruta de video
+Route::resource('videos', 'VideoController');
 
 ///////////////////NEW ADDED FOR CHAT//////////
 Route::get('/husr', 'HomeController@homeUser')->name('husr');
