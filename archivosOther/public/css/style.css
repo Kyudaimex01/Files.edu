@@ -22,7 +22,7 @@
 		- Typographical Elements
 		- Headings
 		- Objects
-		- Gallery
+		- gallery
 		- Forms
 		- Buttons
 	- Structure and Layout
@@ -312,7 +312,7 @@ img {
 	width: auto;
 }
 
-/* Gallery
+/* gallery
 --------------------------------------------- */
 
 .gallery {
