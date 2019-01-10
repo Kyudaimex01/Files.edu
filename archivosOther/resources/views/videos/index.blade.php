@@ -5,6 +5,7 @@
             {{session('status')}}
         </div>
     @endif
+    <a href="{{ '/videos/create' }}" class="btn btn-dark">AÑADIR</a>
     <div class="row">
         @foreach($videos as $video)
             <div class="col-sm">

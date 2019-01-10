@@ -1,6 +1,6 @@
 @extends('layouts.header')
 @section('content')
-    <video class="card-img-top mx-auto d-block" style="margin: 10px;" controls>
+    <video class="card-img-top mx-auto d-block" style="width:80%; margin: 20px;" controls>
         <source src="{{$video->video}}" type="video/mp4">
     </video>
     <div class="text-center">

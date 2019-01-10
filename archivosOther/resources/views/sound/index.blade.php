@@ -6,6 +6,7 @@
              {{session('status')}}
          </div>
      @endif
+     <a href="{{ '/audios/create' }}" class="btn btn-dark">AÑADIR</a>
      <div class="row">
         @foreach($audios as $audio)
              <div class="col-sm">

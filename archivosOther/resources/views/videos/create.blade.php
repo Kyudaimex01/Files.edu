@@ -26,6 +26,7 @@
             </div>
 
             <button type="submit" class="btn btn-primary">GUARDAR</button>
+            <a href="{{ '/videos' }}" class="btn">Volver</a>
         </form>
     </div>
 @endsection

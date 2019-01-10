@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Portal Oficial de la Unidad de Archivos</title>
 
-<<<<<<< HEAD
     <script type="text/javascript">
         $(document).on('ready', function(){
                setTimeout(autoloaded, 1000); //Se llamará cada 5 segundos y se refrescarán los datos de dicha tabla que se cargan mediante la función LOAD de JQuery.
@@ -20,7 +19,6 @@
         }
     </script>
 
-=======
     <!--Bootrap_Imagenes-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
@@ -31,7 +29,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/dropzone.css" type="text/css">
 
     @stack('styles')
->>>>>>> 1a0ff4c9
+
     <!-- All in One SEO Pack 2.7.2 by Michael Torbert of Semper Fi Web Design[140,177] -->
     <meta name="description"
           content="Portal de la Unidad de Archvos de la Universidad Mayor de San Simón de Bolivia, para noticias, información HAZ CLIC AQUÍ">
@@ -275,11 +273,24 @@
                                     class="menu-top" target="_blank" href="http://www.posgrado.umss.edu.bo/" itemprop="url"><span
                                         itemprop="name"><i class="fa fa-graduation-cap"></i><span
                                             class="fontawesome-text"> Calendario de Fechas</span></span></a></li>
-                        <li id="menu-item-8117"
+                        <li id="menu-item-7"
                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8117">
                             <a class="menu-top" href=" " itemprop="url"><span itemprop="name"><i class="fa fa-flask"></i><span
                                             class="fontawesome-text"> Galeria</span></span></a>
-<<<<<<< HEAD
+                            <ul class="sub-menu">
+                                <li id="menu-item-8"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8118">
+                                    <a class="menu-top" href="{{ 'audios' }}" itemprop="url"><span itemprop="name">Audios</span></a>
+                                </li>
+                                <li id="menu-item-9"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8119">
+                                    <a class="menu-top" href="{{ 'imagen' }}" itemprop="url"><span itemprop="name">Imagenes</span></a>
+                                </li>
+                                <li id="menu-item-10"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8200">
+                                    <a class="menu-top" href="{{ 'videos' }}" itemprop="url"><span itemprop="name">Videos</span></a></li>
+                            </ul>
+
                             </li>
                         <li id="menu-item-8147"
                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8147">
@@ -297,7 +308,7 @@
                                                     class="fontawesome-text"> SItra</span></span></a></li>
                             </ul>
                         </li>
-=======
+
                             <ul class="sub-menu">
                                 <li id="menu-item-8118"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8118">
@@ -319,7 +330,7 @@
                                     class="menu-top" target="_blank" href="http://www.umss.edu.bo/index.php/blog/" itemprop="url"><span
                                         itemprop="name"><i class="fa fa-users"></i><span
                                             class="fontawesome-text"> Consultas</span></span></a></li>
->>>>>>> 1a0ff4c9
+
                         <li id="menu-item-8147"
                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8147">
                             <a class="menu-top" itemprop="url"><span itemprop="name"><i class="fa fa-cogs"></i><span
@@ -347,13 +358,13 @@
     </header>
 
 </div>
-<<<<<<< HEAD
+
 @yield('content')
-=======
+
 
 
 @stack('scripts')
->>>>>>> 1a0ff4c9
+
 </body>
 <footer class="site-footer" itemscope="" itemtype="https://schema.org/WPFooter">
     <div class="wrap">

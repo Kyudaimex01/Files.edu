@@ -62,7 +62,7 @@ class AudioController extends Controller
 
         //return 'saved';
         //return $request;
-        return redirect()->route('audios.index')->with('status', 'Audio Guardada');
+        return redirect()->route('audios.index')->with('status', 'Audio Guardado');
     }
 
     /**

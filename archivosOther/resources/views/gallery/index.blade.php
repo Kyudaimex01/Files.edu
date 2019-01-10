@@ -7,6 +7,8 @@
         </div>
     @endif
 
+    <a href="{{ '/imagen/create' }}" class="btn btn-dark">AÑADIR</a>
+
     <div class="row">
         @foreach($imagenes as $imagen)
             <div class="col-sm">
@@ -20,8 +22,7 @@
             </div>
         @endforeach
     </div>
-    @include('gallery.slider')
-    <p>separacion de sliders</p>
+    <!--include('gallery.slider')--><!--este slider solo funcionaba de manera statica-->
     <!--include('gallery.carrusel')-->
 
     @include('gallery.sliderDinamico')
