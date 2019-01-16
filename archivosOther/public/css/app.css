@@ -5199,6 +5199,11 @@ input[type="button"].btn-block {
   width: 100%;
   border-top-left-radius: calc(0.25rem - 1px);
   border-top-right-radius: calc(0.25rem - 1px);
+  object-fit: cover;
+}
+
+.card-img-top:hover{
+  filter: brightness(100%)
 }
 
 .card-img-bottom {
@@ -10471,4 +10476,3 @@ a.text-dark:focus {
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
-

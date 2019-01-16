@@ -1,7 +1,11 @@
 @extends('layouts.header')
 @section('content')
+<<<<<<< HEAD
 <!--
     <div class="site-inner" >
+=======
+    <div class="site-innner" >
+>>>>>>> 1a0ff4c9
         <div class="content-sidebar-wrap">
             <div class="content">
                 <div style="position: relative;padding-top: 75px;" >
