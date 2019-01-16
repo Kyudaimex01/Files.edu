@@ -1,5 +1,6 @@
 <?php
 use App\Notice;
+use Carbon\Carbon;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -71,4 +72,9 @@ Route::resource('roles','RoleController');
 Route::resource('certifications','CertificationController');
 Route::resource('procedures','ProcedureController');
 
+});
+
+Route::get('othercalendar', function(){
+    $date = Carbon::now();
+    return view('othercalendar')->with('date',$date);
 });

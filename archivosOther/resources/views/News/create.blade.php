@@ -25,7 +25,7 @@
 
         <div class="form-group hidden">
             {!! Form::label('posted_by', 'Autor'); !!}
-            {!! Form::text('posted_by', Auth::user()->name, ['placeholder' => 'Autor de la noticia', 'class' => 'form-control']); !!}
+            {!! Form::text('posted_by', Auth::user()->id, ['placeholder' => 'Autor de la noticia', 'class' => 'form-control']); !!}
         </div>
 
         <div class="form-group">
