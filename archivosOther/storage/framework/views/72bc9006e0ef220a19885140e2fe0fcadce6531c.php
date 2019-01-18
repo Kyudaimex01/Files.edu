@@ -72,10 +72,14 @@
                             <div id="login-g" class="modal fade" style="margin-top: 0;padding-top: 0; background: rgba(0,0,0,0.8) " tabindex="-1" role="dialog">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
-                                        <div class="modal-header">
-                                            <a onclick="showLoginForm()" style="font-size: 35px; color: #002a80">&times;</a>
-                                            <h4>Iniciar Sesion</h4>
-                                        </div>
+                                        <div class="col-md-10">
+                                            <div style="margin-left:0px; padding-left:0px" class="col-md-2">
+                                                <a onclick="showLoginForm()" style="font-size: 35px; color: #002a80">&times;</a>
+                                            </div>
+                                            <div style="margin-left:20%; padding-left:20%" class="col-md-8">
+                                                <h4>Iniciar Sesion</h4>
+                                            </div>
+                                        </div><br>
                                         <div class="modal-body">
                                             <form method="POST" action="<?php echo e(route('login')); ?>" aria-label="<?php echo e(__('Login')); ?>">
                                                 <?php echo csrf_field(); ?>

@@ -31,6 +31,11 @@
             {!! Form::label('img_route','imagen'); !!}
             {!! Form::file('img_route', null, ['placeholder' => $new->img_route, 'class' => 'form-control']); !!}
         </div>
+        <div class="form-group">
+            {!! Form::label('expirated_at', 'Fecha Fin') !!}
+            {!! Form::date('expirated_at', null, [ 'class' => 'form-control']); !!}
+        </div>
+
         {!! Form::submit('Update', ['class' => 'btn btn-primary pull-right']); !!}
 
         {!! Form::close() !!}

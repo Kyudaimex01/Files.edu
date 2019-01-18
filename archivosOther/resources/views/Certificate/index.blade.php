@@ -45,7 +45,6 @@
                 <td>{!! $procedure->external_time !!}</td>
                 <td>{!! $procedure->posted_by !!}</td>
                 <td>{!! $procedure->type_pro !!}</td>
-                @can('notices.edit')
                 <td>
                     <a class="btn btn-success btn-sm" href="certifications/{!! $procedure->id_pro !!}/edit" title="Editar">
                         <i class="zmdi zmdi-edit"></i></a>
@@ -58,7 +57,7 @@
                     {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm','style'=> 'display:none']) !!}
                     {!! Form::close() !!}
                 </td>
-                @endcan
+
             </tr>
         @endforeach
 

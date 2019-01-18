@@ -8,11 +8,16 @@
     margin-bottom: 0px;
     padding-bottom: 0px
 }
-</style>
 
+.fc-button.fc-state-default{
+    display: none;
+}
+</style>
+<!--
 <div class="container no_margin" >
     <div class="row no_margin" >
         <div class="col-md-8 col-md-offset-2 no_margin" >
+        -->
             <div class="panel panel-default no_margin"><!--background-color: #003770; color:white-->
                 <div class="panel-heading no_margin" style="text-align: center">Calendario
                 </div>
@@ -20,9 +25,11 @@
                     {!! $calendar->calendar() !!}
                 </div>
             </div>
+<!--
         </div>
     </div>
 </div>
+-->
 
 <script src="{{ asset('js/calendar/moment.min.js')}}"></script>
 <script src="{{ asset('js/calendar/fullcalendar.min.js')}}"></script>

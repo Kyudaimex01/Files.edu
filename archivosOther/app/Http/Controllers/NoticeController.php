@@ -204,12 +204,12 @@ class NoticeController extends Controller
         //update news
         $new = DB::table('notices')->where('id_new', $id);
         $aux = $new->first();
-        if($request->hasFile('profile_image')){
-            Storage::delete('public/profileImages/'. $aux->profile_image);
+        if($request->hasFile('img_route')){
+            Storage::delete('public/profileImages/'. $aux->img_route);
             $notice = $new->update(['title'=>$request->input('title'),
                 'description'=>$request->input('description'),
                 'posted_by'=>$request->input('posted_by'),
-                'profile_image'=> $fileNameToStore]);
+                'img_route'=> $fileNameToStore]);
         }else{
             $notice = $new->update(['title'=>$request->input('title'),
                 'description'=>$request->input('description'),
