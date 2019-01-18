@@ -130,13 +130,13 @@
                             </section>
                         </div>
                     </div>
-<<<<<<< HEAD
+
                 </div>
             </div>
         </div>
     </div>
 </div>
-=======
+
                     <!--           <hr>seccion donde se añadira el slider o carrusel. Fer:aun esta en progreso                                                                                                                                                                                                                                                                                                                                                                                             -->
          <!--           <div id="front-page-3" class="front-page-3">
                         <div class="image-section">
@@ -164,6 +164,6 @@
                 </main>
             </div>
         </div>  -->
->>>>>>> 1a0ff4c9
+
 @endsection
 

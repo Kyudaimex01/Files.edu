@@ -1,3 +1,8 @@
+<style>
+    a.aniadir{
+        margin: fill;
+    }
+</style>
 @extends('layouts.header')
 @section('title', 'Audios')
  @section('content')
@@ -6,13 +11,16 @@
              {{session('status')}}
          </div>
      @endif
-     <a href="{{ '/audios/create' }}" class="btn btn-dark">AÑADIR</a>
+     <div class="aniadir" align="right">
+         <a href="{{ '/audios/create' }}" class="btn btn-dark">AÑADIR</a>
+     </div>
+
      <div class="row">
         @foreach($audios as $audio)
              <div class="col-sm">
                  <div class="card text-center" style="width: 18rem; margin-top: 70px">
                      <!--<audio src=""></audio>-->
-                         <audio class="wp-audio-shortcode" preload="none" style="width: 100%" controls="controls" >
+                         <audio class="wp-audio-shortcode" preload="none" style="width: 100%" controls="controls">
                              <source type="audio/mpeg" src="{{$audio->audio}}" />
                          </audio>
                      <div class="card-body">

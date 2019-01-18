@@ -24,6 +24,7 @@
 
     <!--slider de galeria Imagenes-->
     <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" type="text/css" href="/css/slider.css">
 
     <!--dropzone-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/dropzone.css" type="text/css">
@@ -358,7 +359,6 @@
     </header>
 
 </div>
-
 @yield('content')
 
 

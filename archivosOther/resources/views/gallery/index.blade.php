@@ -24,11 +24,11 @@
     </div>
     <!--include('gallery.slider')--><!--este slider solo funcionaba de manera statica-->
     <!--include('gallery.carrusel')-->
-
     @include('gallery.sliderDinamico')
 
     @push('styles')
         <link rel="stylesheet" type="text/css" href="/css/twitter-bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="/css/slider.css">
     @endpush
 
     @push('scripts')
