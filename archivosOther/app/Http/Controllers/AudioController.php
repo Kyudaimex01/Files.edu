@@ -17,7 +17,7 @@ class AudioController extends Controller
     {
         $audios = Audio::all();
         //return 'si encontraste esto, el problema esta en la base de datos';
-            return view('sound.index', compact('audios'));
+        return view('sound.index', compact('audios'));
     }
 
     /**
@@ -38,13 +38,11 @@ class AudioController extends Controller
      */
     public function store(Request $request)
     {
-
-
         $validateData = $request->validate([
             'name' => 'required|max: 15',
+            //'audio' => 'required|mimes:.mp3'
             'audio' => 'required'
             //'audio' => 'mimetypes:audio/mp3,audio/ogg,audio/mp4'
-            //'audio' => 'required|mimes:mp3,ogg,wav,'
             //'audio' => ['required', new ValAudio]
         ]);
 
@@ -71,9 +69,10 @@ class AudioController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Audio $audio)
     {
-        //
+        //$audio = Audio::find($id);
+        return view('sound.show', compact('audio'));
     }
 
     /**
@@ -113,6 +112,5 @@ class AudioController extends Controller
 
         $audio->delete();
         return redirect()->route('audios.index')->with('status', 'Audio Eliminado');
-        //return 'eliminado';
     }
 }

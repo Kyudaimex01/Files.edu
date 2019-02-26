@@ -6,8 +6,13 @@
             {{session('status')}}
         </div>
     @endif
-
-    <a href="{{ '/imagen/create' }}" class="btn btn-dark">AÑADIR</a>
+    <div class="container">
+        <div class="row">
+            <div class="col" align="right">
+                <a href="{{ '/imagen/create' }}" class="btn btn-dark">AÑADIR</a>
+            </div>
+        </div>
+    </div>
 
     <div class="row">
         @foreach($imagenes as $imagen)

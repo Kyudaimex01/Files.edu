@@ -5,7 +5,14 @@
             {{session('status')}}
         </div>
     @endif
-    <a href="{{ '/videos/create' }}" class="btn btn-dark">AÑADIR</a>
+    <div class="container">
+        <div class="row">
+            <div class="col" align="right">
+                <a href="{{ '/videos/create' }}" class="btn btn-dark">AÑADIR</a>
+            </div>
+        </div>
+    </div>
+
     <div class="row">
         @foreach($videos as $video)
             <div class="col-sm">
@@ -15,7 +22,7 @@
                     </video>
                     <div class="card-body">
                         <h5 class="card-title">{{$video->name}}</h5>
-                        <a href="/videos/{{$video->id}}" class="btn btn-primary">Ver Mas...</a>
+                        <a href="/videos/{{$video->id}}" class="btn btn-primary">Ver Video</a>
                     </div>
                 </div>
             </div>

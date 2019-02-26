@@ -21,7 +21,7 @@
                     <img src="{{ asset('img/index/bienvenido-archivos-1.jpg') }}" alt="Bienvenidos">
                 </div><br>
                 <div style="margin-bottom: 7%">
-                    <h3 class="description__title" style="background-color: none; color:#002a80">BIENVENIDOS</h5>
+                    <h3 class="description__title" style="background-color: none; color:#002a80">BIENVENIDOS</h3>
                     <p class="description_text" style="margin-right:4%;margin-left:4%;color: black">Al Sitio Web de la Secci&oacute;n Archivos de la Universidad Mayor de San Sim&oacute;n (UMSS), secci&oacute;n responsable del resguardo y </p>
                     <p><button class="link" onclick="showWelcome()">ver mas</button></p>
                 </div>
