@@ -1,20 +1,7 @@
 @extends('layouts.header')
 @section('content')
-<!--
-    <div class="site-inner" >
-        <div class="content-sidebar-wrap">
-            <div class="content">
-                <div style="position: relative;padding-top: 75px;" >
-                    <div class="image-section" style="height: auto;padding-top: 75px;">
-                        <h4 style="color: black">Certificaciones</h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
--->
     <div class="container">
-        <h4 style="text-align: center; text-transform: uppercase; color: #003770">Apostilla</h4><br>
+        <h4 style="text-align: center; text-transform: uppercase; color: #003770">APOSTILLA</h4><br>
         <h5>REQUISITOS PARA LAS DISTINTAS OPERACIONES A SER REALIZADAS EN LA APOSTILLA</h5><br>
         <div>
 
@@ -24,6 +11,14 @@
             <div style="padding-left: 1.8em">
                 {!! $procedure->requirements_procedure !!}
             </div>
+            @if( $procedure->value_procedure != null )
+            <div>
+                <p style="font-weight: bold; color: #003770; padding-left: 0.8em">Costo:</p>
+                <div style="padding-left: 1.8em">
+                    <p>Valorado de Caja Central de la UMSS: {{ $procedure->value_procedure }}</p>
+                </div>
+            </div>
+            @endif
             <div>
                 <p style="font-weight: bold; color: #003770; padding-left: 0.8em">Duración: </p>
                 <div style="padding-left: 1.8em">
@@ -54,12 +49,5 @@
         @php ($i++)
         @endforeach
         </div>
-        <!--
-    <div>
-        <p><strong style="color:red; text-decoration-line: underline">* NOTA: </strong>Recuerde que una vez iniciado el trámite, se le entregara una
-            <strong style="color:blue"> Boleta </strong>que deberá ser llenada para el recojo del documento de la siguiente manera:</p>
-            <img src="images/boleta-tramite.jpg" alt="Boleta de tramite" >
     </div>
--->
-</div>
 @endsection

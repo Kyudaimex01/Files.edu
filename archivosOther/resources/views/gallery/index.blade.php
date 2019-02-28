@@ -7,7 +7,7 @@
         </div>
     @endif
 
-    <a href="{{ '/imagen/create' }}" class="btn btn-dark">AÑADIR</a>
+    <a href="{{ '/imagen/create' }}" class="btn btn-dark">A&ntilde;adir</a>
 
     <div class="row">
         @foreach($imagenes as $imagen)
@@ -26,17 +26,15 @@
     <!--include('gallery.carrusel')-->
 
     @include('gallery.sliderDinamico')
-
-    @push('styles')
+    <!-- push('styles')-->
         <link rel="stylesheet" type="text/css" href="/css/twitter-bootstrap.css">
-    @endpush
-
-    @push('scripts')
+    <!-- endpush-->
+    <!--push('scripts')-->
         <script
                 src="https://code.jquery.com/jquery-3.3.1.min.js"
                 integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
                 crossorigin="anonymous"></script>
         <script src="/js/twitter-bootstrap.js"></script>
-    @endpush
+    <!--endpush-->
 
 @endsection

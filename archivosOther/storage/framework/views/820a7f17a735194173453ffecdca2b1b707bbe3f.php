@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <!-- saved from url=(0023)http://www.archivos.umss.edu.bo/ -->
 <html lang="es-ES">
@@ -20,12 +19,44 @@
         }
     </script>
 
+    <!--Bootrap_Imagenes-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!--slider de galeria Imagenes-->
+    <link rel="stylesheet" href="css/slider.css">
+
+    <!--dropzone-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/dropzone.css" type="text/css">
+
+    <?php echo $__env->yieldPushContent('styles'); ?>
+
     <!-- All in One SEO Pack 2.7.2 by Michael Torbert of Semper Fi Web Design[140,177] -->
     <meta name="description"
           content="Portal de la Unidad de Archvos de la Universidad Mayor de San Simón de Bolivia, para noticias, información HAZ CLIC AQUÍ">
     <link rel="next" href="<?php echo e(asset('/')); ?>">
 
     <link rel="canonical" href="<?php echo e(asset('/')); ?>">
+
+    <!--dropzone-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
+    <script>
+        $('#datepincker').datepicker({
+            autoclose: true
+        })
+
+        $('.select').select();
+
+        CKEDITOR.replace('editor');
+
+        new Dropzone('.dropzone',{
+            url: '/',
+            dictDefaultMessage: 'Arrastra las imagenes aqui para subirlas'
+        })
+
+        Dropzone.autoDiscover = false;
+
+    </script>
+
 <!--1-->
     <script type="text/javascript" src="<?php echo e(asset('js/headscript.js')); ?>"></script>
     <!-- /all in one seo pack
@@ -211,28 +242,32 @@
                         </li>
                         <li id="menu-item-859"
                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-859">
-                            <a class="menu-top" href="<?php echo e('services'); ?>" itemprop="url"><span itemprop="name"><i class="fa fa-university"></i><span
+                            <a class="menu-top" href="#" itemprop="url"><span itemprop="name"><i class="fa fa-university"></i><span
                                             class="fontawesome-text"> Servicios</span></span></a>
                             <ul class="sub-menu">
                                 <li id="menu-item-860"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-860">
-                                    <a class="menu-top" href="<?php echo e('legalization'); ?>" itemprop="url"><span itemprop="name">Legalizaciones</span></a>
+                                    <a class="menu-top" href="<?php echo e('/legalization'); ?>" itemprop="url"><span itemprop="name">Legalizaciones</span></a>
 
                                 </li>
-                                <li id="menu-item-2017"
+                                <li id="menu-item-2017  "
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2017">
-                                    <a class="menu-top" href="<?php echo e('certification'); ?>" itemprop="url"><span itemprop="name">Certificaciones</span></a>
+                                    <a class="menu-top" href="<?php echo e('/certification'); ?>" itemprop="url"><span itemprop="name">Certificaciones</span></a>
+
+                                </li>
+                                <li id="menu-item-2017  "
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2017">
+                                    <a class="menu-top" href="<?php echo e('/other'); ?>" itemprop="url"><span itemprop="name">Other</span></a>
 
                                 </li>
                                 <li id="menu-item-3589"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3589">
-                                    <a class="menu-top" href="<?php echo e('apostille'); ?>" href="<?php echo e('apostille'); ?>" itemprop="url"><span
+                                    <a class="menu-top" href="<?php echo e('/apostille'); ?>" href="<?php echo e('apostille'); ?>" itemprop="url"><span
                                                 itemprop="name">Apostilla</span></a></li>
                                 <li id="menu-item-1156"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1156">
-                                    <a class="menu-top" href="<?php echo e('guide'); ?>" itemprop="url"><span itemprop="name"><i class="fa fa-user"></i><span
+                                    <a class="menu-top" href="<?php echo e('/guide'); ?>" itemprop="url"><span itemprop="name"><i class="fa fa-user"></i><span
                                                     class="fontawesome-text"> Guia Tramite</span></span></a>
-
                                 </li>
                             </ul>
                         </li>
@@ -242,10 +277,24 @@
                                     class="menu-top" target="_blank" href="http://www.posgrado.umss.edu.bo/" itemprop="url"><span
                                         itemprop="name"><i class="fa fa-graduation-cap"></i><span
                                             class="fontawesome-text"> Calendario de Fechas</span></span></a></li>
-                        <li id="menu-item-8117"
+                        <li id="menu-item-7"
                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8117">
-                            <a class="menu-top" itemprop="url"><span itemprop="name"><i class="fa fa-flask"></i><span
+                            <a class="menu-top" href=" " itemprop="url"><span itemprop="name"><i class="fa fa-flask"></i><span
                                             class="fontawesome-text"> Galeria</span></span></a>
+                            <ul class="sub-menu">
+                                <li id="menu-item-8"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8118">
+                                    <a class="menu-top" href="<?php echo e('audios'); ?>" itemprop="url"><span itemprop="name">Audios</span></a>
+                                </li>
+                                <li id="menu-item-9"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8119">
+                                    <a class="menu-top" href="<?php echo e('imagen'); ?>" itemprop="url"><span itemprop="name">Imagenes</span></a>
+                                </li>
+                                <li id="menu-item-10"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8200">
+                                    <a class="menu-top" href="<?php echo e('videos'); ?>" itemprop="url"><span itemprop="name">Videos</span></a></li>
+                            </ul>
+
                             </li>
                         <li id="menu-item-8147"
                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8147">
@@ -263,6 +312,29 @@
                                                     class="fontawesome-text"> SItra</span></span></a></li>
                             </ul>
                         </li>
+
+                            <ul class="sub-menu">
+                                <li id="menu-item-8118"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8118">
+                                    <a class="menu-top" href="<?php echo e('imagen'); ?>" itemprop="url"><span itemprop="name">Imagenes</span></a>
+                                </li>
+                                <li id="menu-item-8119"
+                                    class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8119">
+                                    <a class="menu-top" href="<?php echo e('videos'); ?>" itemprop="url"><span itemprop="name">Videos</span></a>
+                                </li>
+                                <li id="menu-item-8200"
+                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8200">
+                                    <a class="menu-top" href="<?php echo e('audios'); ?>" href="http://www.umss.edu.bo/index.php/auditoria/" itemprop="url"><span
+                                                itemprop="name">Audios</span></a></li>
+                            </ul>
+                        </li>
+
+                        <li id="menu-item-1196"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1196"><a
+                                    class="menu-top" target="_blank" href="http://www.umss.edu.bo/index.php/blog/" itemprop="url"><span
+                                        itemprop="name"><i class="fa fa-users"></i><span
+                                            class="fontawesome-text"> Consultas</span></span></a></li>
+
                         <li id="menu-item-8147"
                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8147">
                             <a class="menu-top" itemprop="url"><span itemprop="name"><i class="fa fa-cogs"></i><span
@@ -290,7 +362,13 @@
     </header>
 
 </div>
+
 <?php echo $__env->yieldContent('content'); ?>
+
+
+
+<?php echo $__env->yieldPushContent('scripts'); ?>
+
 </body>
 <footer class="site-footer" itemscope="" itemtype="https://schema.org/WPFooter">
     <div class="wrap">

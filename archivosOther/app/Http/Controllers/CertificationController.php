@@ -20,6 +20,13 @@ class CertificationController extends Controller
             ->with('procedures', $procedures);
     }
 
+    public function get_others(){
+        $others = DB::table('procedures')->where('type_pro', 'otros')->get();
+        return view('other')
+            ->with('title','Otros')
+            ->with('others', $others);
+    }
+
     public function get_certifications(){
         $certifications = DB::table('procedures')->where('type_pro', 'certificacion')->get();
         return view('certificate')
@@ -70,7 +77,7 @@ class CertificationController extends Controller
     {
         $form_options = array (
             'id' => 'dataForm',
-            'url' => '/certifications',
+            'url' => '/certifications',/** /certifications*/
             'class'  => 'form-horizontal',
             'name'   => 'newCertificate',
             'files'  => true
@@ -90,6 +97,7 @@ class CertificationController extends Controller
         $this->validate($request, [
             'name_procedure' => 'required',
             'requirements_procedure' => 'required',
+            'value_procedure' => 'required',
             //'internal_time' => 'required',
             //'external_time' => 'required',
             //'advice' => 'required',
@@ -120,6 +128,7 @@ class CertificationController extends Controller
         $procedure->id_pro = $size + 1;
         $procedure->name_procedure = $request->input('name_procedure');
         $procedure->requirements_procedure = $request->input('requirements_procedure');
+        $procedure->value_procedure = $request->input('value_procedure');
         $procedure->img_procedure = $fileNameToStore;
         $procedure->internal_time = $request->input('internal_time');
         $procedure->external_time = $request->input('external_time');
@@ -179,6 +188,7 @@ class CertificationController extends Controller
         $this->validate($request, [
             'name_procedure' => 'required',
             'requirements_procedure' => 'required',
+            'value_procedure' => 'required',
             //'internal_time' => 'required',
             //'external_time' => 'required',
             //'advice' => 'required',
@@ -211,6 +221,7 @@ class CertificationController extends Controller
             $procedure = $new->update([
                 'name_procedure'=>$request->input('name_procedure'),
                 'requirements_procedure'=>$request->input('requirements_procedure'),
+                'value_procedure'=> $request->input('value_procedure'),
                 'img_procedure'=> $fileNameToStore,
                 'internal_time'=> $request->input('internal_time'),
                 'external_time'=> $request->input('external_time'),
@@ -221,6 +232,7 @@ class CertificationController extends Controller
             $procedure = $new->update([
                 'name_procedure'=>$request->input('name_procedure'),
                 'requirements_procedure'=>$request->input('requirements_procedure'),
+                'value_procedure'=> $request->input('value_procedure'),
                 'internal_time'=> $request->input('internal_time'),
                 'external_time'=> $request->input('external_time'),
                 'advice'=> $request->input('advice'),

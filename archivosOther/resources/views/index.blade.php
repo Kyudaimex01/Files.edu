@@ -1,10 +1,25 @@
-
 @extends('layouts.header')
 @section('content')
 <style>
     a.link{
         color: #003770;
     }
+    @media only screen and (max-width:1170px) and (min-width:990px){
+        .sec-right-side{
+            margin: 0px;
+            padding: 0px;
+        }
+        .sec-left-side{
+            margin: 0px;
+            padding: 0px;
+        }
+    }
+    @media only screen and (max-width:970px) and (min-width:750px){
+        .sec-left-side{
+            width: 500px
+        }
+    }
+
 </style>
 <div style="margin-top:0px;padding-top:0px; margin-left:2%;margin-right:1%; margin-bottom:0px; padding-bottom: 0px">
     <div class="content-sidebar-wrap" style="margin-top:0px;padding-top:0px">
@@ -16,12 +31,6 @@
                             <section id="custom_html-11" class="widget_text widget widget_custom_html">
                                 <div class="widget_text widget-wrap">
                                     <div class="textwidget custom-html-widget">
-                                    <!--<div id="letra">
-                                            <div class="row" align="center">
-                                                <h1 style="margin-rigth:30%;margin-left:30%" id="SombraTitulo">Unidad de Archivos UMSS</h1>
-                                            </div>
-                                        </div>
-                                    -->
                                         <div >
                                             @include('layouts.partials.pictures')
                                             @yield('picture')
@@ -34,8 +43,8 @@
                 </div>
             </div>
             <br>
-            <div class="container">
-                <div class="col-md-9">
+            <div class="container row">
+                <div class="col-md-9 sec-right-side">
                     <h3 style="text-align: center; text-transform: uppercase; color: #003770">Historia del Archivo</h3>
                     <br>
                     <img style="display: block; margin-left: auto; margin-right: auto; width: 95%" src="images/Historia-Archivos-604x270.jpg" alt="Historia de la Unidad de Archivos" >
@@ -73,10 +82,9 @@
                             </div>
                         </div>
                     </div>
-                    
                 </div>
-                <div class="col-md-3"><!--style="width: 60%; height: 60%; margin-top: 0px; padding-top: 0px; margin-bottom: 0px; padding-bottom: 0px; display: block; margin-left: auto; margin-right: auto"-->
-                    <div >
+                <div class="col-md-3 sec-left-side"><!--style="width: 60%; height: 60%; margin-top: 0px; padding-top: 0px; margin-bottom: 0px; padding-bottom: 0px; display: block; margin-left: auto; margin-right: auto"-->
+                    <div>
                         <h3 style="text-align: center; text-transform: uppercase; color: #003770">Horarios de Atenci&oacute;n</h3>
                         <br>
                         <img style="display: block; margin-left: auto; margin-right: auto; width: 95%" src="images/Horario-atencion-oficial-archivos-umss-604x270.jpg" alt="Horarios de atencion" >
@@ -151,13 +159,12 @@
                             </section>
                         </div>
                     </div>
-<<<<<<< HEAD
                 </div>
             </div>
         </div>
     </div>
 </div>
-=======
+<--
                     <!--           <hr>seccion donde se añadira el slider o carrusel. Fer:aun esta en progreso                                                                                                                                                                                                                                                                                                                                                                                             -->
          <!--           <div id="front-page-3" class="front-page-3">
                         <div class="image-section">
@@ -185,6 +192,6 @@
                 </main>
             </div>
         </div>  -->
->>>>>>> 1a0ff4c9
+    -->
 @endsection
 

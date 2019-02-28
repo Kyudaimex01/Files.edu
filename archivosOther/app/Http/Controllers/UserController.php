@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
 use function Psy\debug;
 use Caffeinated\Shinobi\Models\Role;
+use DB;
 
 class UserController extends Controller
 {
@@ -62,7 +63,7 @@ class UserController extends Controller
         $user->address = $request->input('address');
         $user->password = $request->input('password');
         $user->phone = $request->input('phone');
-        $notice->save();
+        $user->save();
 
 	    Session::flash('message','Se guardo&oacute; '. $user['name'] . ' correctamente');
 	    return redirect('/users');

@@ -24,6 +24,14 @@
             <div style="padding-left: 1.8em">
                 {!! $certification->requirements_procedure !!}
             </div>
+            @if( $certification->value_procedure != null )
+            <div>
+                <p style="font-weight: bold; color: #003770; padding-left: 0.8em">Costo:</p>
+                <div style="padding-left: 1.8em">
+                    <p>Valorado de Caja Central de la UMSS: {{ $certification->value_procedure }}</p>
+                </div>
+            </div>
+            @endif
             <div>
                 <p style="font-weight: bold; color: #003770; padding-left: 0.8em">Duración: </p>
                 <div style="padding-left: 1.8em">
