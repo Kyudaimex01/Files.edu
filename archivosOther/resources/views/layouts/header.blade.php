@@ -24,9 +24,10 @@
 
     <!--slider de galeria Imagenes-->
     <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" type="text/css" href="/css/slider.css">
 
-    <!--dropzone-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/dropzone.css" type="text/css">
+    <!--ventanas modales-->
+    <link rel="stylesheet" href="css/modal.css" type="text/css">
 
     @stack('styles')
 
@@ -37,8 +38,6 @@
 
     <link rel="canonical" href="{{asset('/')}}">
 
-    <!--dropzone-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
     <script>
         $('#datepincker').datepicker({
             autoclose: true
@@ -284,15 +283,15 @@
                             <ul class="sub-menu">
                                 <li id="menu-item-8"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8118">
-                                    <a class="menu-top" href="{{ 'audios' }}" itemprop="url"><span itemprop="name">Audios</span></a>
+                                    <a class="menu-top" href="{{ '/audios' }}" itemprop="url"><span itemprop="name">Audios</span></a>
                                 </li>
                                 <li id="menu-item-9"
                                     class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-8119">
-                                    <a class="menu-top" href="{{ 'imagen' }}" itemprop="url"><span itemprop="name">Imagenes</span></a>
+                                    <a class="menu-top" href="{{ '/imagen' }}" itemprop="url"><span itemprop="name">Imagenes</span></a>
                                 </li>
                                 <li id="menu-item-10"
                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8200">
-                                    <a class="menu-top" href="{{ 'videos' }}" itemprop="url"><span itemprop="name">Videos</span></a></li>
+                                    <a class="menu-top" href="{{ '/videos' }}" itemprop="url"><span itemprop="name">Videos</span></a></li>
                             </ul>
 
                             </li>
@@ -362,7 +361,6 @@
     </header>
 
 </div>
-
 @yield('content')
 
 

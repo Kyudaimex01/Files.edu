@@ -5,9 +5,10 @@
     </video>
     <div class="text-center">
         <h5 class="card-tile">{{$video->name}}</h5>
+        <br>
+        <a href="{{ '/videos' }}" class="btn btn-info">ATRAS</a>
         {!! Form::open(['route'=> ['videos.destroy', $video->id], 'method' =>'DELETE']) !!}
         {!! Form::submit('Eliminar', ['class' => 'btn btn-danger']) !!}
         {!! Form::close() !!}
-        <a href="{{ '/videos' }}" class="btn btn-info">Atras</a>
     </div>
 @endsection

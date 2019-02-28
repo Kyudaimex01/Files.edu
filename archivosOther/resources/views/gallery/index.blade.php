@@ -6,8 +6,18 @@
             {{session('status')}}
         </div>
     @endif
+<<<<<<< HEAD
 
     <a href="{{ '/imagen/create' }}" class="btn btn-dark">A&ntilde;adir</a>
+=======
+    <div class="container">
+        <div class="row">
+            <div class="col" align="right">
+                <a href="{{ '/imagen/create' }}" class="btn btn-dark">AÑADIR</a>
+            </div>
+        </div>
+    </div>
+>>>>>>> c69d8ee79530da8b72cc125df71a69fe824b4aa6
 
     <div class="row">
         @foreach($imagenes as $imagen)
@@ -24,12 +34,18 @@
     </div>
     <!--include('gallery.slider')--><!--este slider solo funcionaba de manera statica-->
     <!--include('gallery.carrusel')-->
-
     @include('gallery.sliderDinamico')
     <!-- push('styles')-->
         <link rel="stylesheet" type="text/css" href="/css/twitter-bootstrap.css">
+<<<<<<< HEAD
     <!-- endpush-->
     <!--push('scripts')-->
+=======
+        <link rel="stylesheet" type="text/css" href="/css/slider.css">
+    @endpush
+
+    @push('scripts')
+>>>>>>> c69d8ee79530da8b72cc125df71a69fe824b4aa6
         <script
                 src="https://code.jquery.com/jquery-3.3.1.min.js"
                 integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

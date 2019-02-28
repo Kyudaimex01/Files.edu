@@ -159,12 +159,20 @@
                             </section>
                         </div>
                     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> c69d8ee79530da8b72cc125df71a69fe824b4aa6
                 </div>
             </div>
         </div>
     </div>
 </div>
+<<<<<<< HEAD
 <--
+=======
+
+>>>>>>> c69d8ee79530da8b72cc125df71a69fe824b4aa6
                     <!--           <hr>seccion donde se añadira el slider o carrusel. Fer:aun esta en progreso                                                                                                                                                                                                                                                                                                                                                                                             -->
          <!--           <div id="front-page-3" class="front-page-3">
                         <div class="image-section">
@@ -192,6 +200,10 @@
                 </main>
             </div>
         </div>  -->
+<<<<<<< HEAD
     -->
+=======
+
+>>>>>>> c69d8ee79530da8b72cc125df71a69fe824b4aa6
 @endsection
 

@@ -6,20 +6,24 @@
              {{session('status')}}
          </div>
      @endif
-     <a href="{{ '/audios/create' }}" class="btn btn-dark">AÑADIR</a>
+     <div class="container">
+         <div class="row">
+             <div class="col" align="right">
+                 <a href="{{ '/audios/create' }}" class="btn btn-dark">AÑADIR</a>
+             </div>
+         </div>
+     </div>
+
      <div class="row">
         @foreach($audios as $audio)
              <div class="col-sm">
                  <div class="card text-center" style="width: 18rem; margin-top: 70px">
-                     <!--<audio src=""></audio>-->
-                         <audio class="wp-audio-shortcode" preload="none" style="width: 100%" controls="controls" >
-                             <source type="audio/mpeg" src="{{$audio->audio}}" />
-                         </audio>
+                     <audio class="wp-audio-shortcode" preload="none" style="margin-right:4%;margin-left:4%;color: black" src="{{$audio->audio}}">
+                         <source src="{{$audio->audio}}" type="audio/mpeg">
+                     </audio>
                      <div class="card-body">
                          <h5 class="card-title">{{$audio->name}}</h5>
-                         {!! Form::open(['route'=> ['audios.destroy', $audio->id], 'method' =>'DELETE']) !!}
-                         {!! Form::submit('Eliminar', ['class' => 'btn btn-danger']) !!}
-                         {!! Form::close() !!}
+                         <a href="/audios/{{$audio->id}}" class="btn btn-primary">Escuchar</a>
                      </div>
                  </div>
              </div>

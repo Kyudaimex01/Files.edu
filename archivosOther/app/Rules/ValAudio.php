@@ -26,7 +26,7 @@ class ValAudio implements Rule
     public function passes($attribute, $value)
     {
         if (!empty($value)){
-            if($value === 'mp3'){
+            if($value == 'mp3'){
                 return true;
             }
         }
