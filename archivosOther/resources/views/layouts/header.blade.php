@@ -22,12 +22,9 @@
     <!--Bootrap_Imagenes-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <!--slider de galeria Imagenes-->
+    <!--slider de galeria Imagenes
     <link rel="stylesheet" href="css/slider.css">
-    <link rel="stylesheet" type="text/css" href="/css/slider.css">
-
-    <!--ventanas modales-->
-    <link rel="stylesheet" href="css/modal.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="/css/slider.css">-->
 
     @stack('styles')
 
@@ -367,20 +364,32 @@
 <footer class="site-footer" itemscope="" itemtype="https://schema.org/WPFooter">
     <div class="wrap">
         <p>Síguenos en
-            <a href="https://www.facebook.com/UmssBolOficial/">
-                <img src="./Portal Oficial de la Universidad Mayor de San Simón_files/facebook.png"
+            <a href="http://www.umss.edu.bo/">
+                <img src="{{ asset('iconos/logo umss.png')}}"
                      alt="" width="30" height="30"></a>
-            <a href="https://twitter.com/UmssBolOficial">
-                <img src="./Portal Oficial de la Universidad Mayor de San Simón_files/Twitter.png"
+            <a href="http://websis.umss.edu.bo/">
+                <img src="{{ asset('iconos/logo websis.png')}}"
                      alt="" width="30" height="30"></a>
-            <a href="https://www.instagram.com/umssboloficial/">
-                <img src="./Portal Oficial de la Universidad Mayor de San Simón_files/instagram.png"
+            <a href="http://www.daf.umss.edu.bo/">
+                <img src="{{ asset('iconos/logo daf.png')}}"
                      alt="" width="30" height="30"></a>
-            <a href="https://www.linkedin.com/school/universidad-mayor-de-san-simon/">
-                <img src="./Portal Oficial de la Universidad Mayor de San Simón_files/linkedin.png"
+            <a href="http://www.dric.umss.edu.bo/">
+                <img src="{{ asset('iconos/logo dric.png')}}"
                      alt="" width="30" height="30"></a>
-            <a href="https://www.youtube.com/universidadmayordesansimon">
-                <img src="./Portal Oficial de la Universidad Mayor de San Simón_files/youtube2-300x300.png"
+            <a href="http://www.oym.umss.net/">
+                <img src="{{ asset('iconos/logo oym.png')}}"
+                     alt="" width="30" height="30"></a>
+            <a href="http://www.uad.umss.edu.bo/">
+                <img src="{{ asset('iconos/logo aud.png')}}"
+                     alt="" width="30" height="30"></a>
+            <a href="http://www.cesu.umss.edu.bo/">
+                <img src="{{ asset('iconos/logo cesu.png')}}"
+                     alt="" width="30" height="30"></a>
+            <a href="http://www.ptaang.umss.edu.bo/">
+                <img src="{{ asset('iconos/logo petaang.png')}}"
+                     alt="" width="30" height="30"></a>
+            <a href="http://www.dpa.umss.edu.bo/inicio/">
+                <img src="{{ asset('iconos/logo dpa.png')}}"
                      alt="" width="30" height="30"></a>
             <br>    Dir: Av. Oquendo y Jordan, Casilla - 992
             <br>   Tel: (591-4) 4232541 - 44 (Int. 358); Fax: (591-4) 4115900

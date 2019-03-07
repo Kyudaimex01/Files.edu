@@ -39,7 +39,7 @@ class AudioController extends Controller
     public function store(Request $request)
     {
         $validateData = $request->validate([
-            'name' => 'required|max: 15',
+            'name' => 'required|max: 30',
             //'audio' => 'required|mimes:.mp3'
             'audio' => 'required'
             //'audio' => 'mimetypes:audio/mp3,audio/ogg,audio/mp4'

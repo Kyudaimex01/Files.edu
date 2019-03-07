@@ -30,3 +30,35 @@
         </form>
     </div>
 @endsection
+<script>
+    function fileValidation(){
+        var fileInput = document.getElementById('file');
+        var filePath = fileInput.value;
+        var allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
+        if(!allowedExtensions.exec(filePath)){
+            alert('Please upload file having extensions .jpeg/.jpg/.png/.gif only.');
+            fileInput.value = '';
+            return false;
+        }else{
+            //Image preview
+            if (fileInput.files && fileInput.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('imagePreview').innerHTML = '<img src="'+e.target.result+'"/>';
+                };
+                reader.readAsDataURL(fileInput.files[0]);
+            }
+        }
+    }
+
+    //function to validate file extension
+    function validateFileExtension(fld,FieldName)
+    {
+        if(!/(\.txt|\.pdf|\.exls|\.doc)$/i.test(fld))
+        {
+            varError = varError + FieldName + "Invalid text file type.\n";
+            return false;
+        }
+        return true;
+    }
+</script>

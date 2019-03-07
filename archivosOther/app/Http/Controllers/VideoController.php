@@ -41,7 +41,7 @@ class VideoController extends Controller
     public function store(Request $request)
     {
         $validateData = $request->validate([
-            'name' => 'required|max: 15',
+            'name' => 'required|max: 30',
             'video' => 'required|mimes:mp4,mkv,mov'//mkv solo lo reconoce google chrome
         ]);
 
