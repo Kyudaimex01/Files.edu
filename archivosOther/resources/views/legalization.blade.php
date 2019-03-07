@@ -1,11 +1,8 @@
 @extends('layouts.header')
 @section('content')
-<<<<<<< HEAD
 <!--
     <div class="site-inner" >
-=======
-    <div class="site-innner" >
->>>>>>> 1a0ff4c9
+
         <div class="content-sidebar-wrap">
             <div class="content">
                 <div style="position: relative;padding-top: 75px;" >
@@ -28,6 +25,14 @@
             <div style="padding-left: 1.8em">
                 {!! $legalization->requirements_procedure !!}
             </div>
+            @if( $legalization->value_procedure != null )
+            <div>
+                <p style="font-weight: bold; color: #003770; padding-left: 0.8em">Costo:</p>
+                <div style="padding-left: 1.8em">
+                    <p>Valorado de Caja Central de la UMSS: {{ $legalization->value_procedure }}</p>
+                </div>
+            </div>
+            @endif
             <div>
                 <p style="font-weight: bold; color: #003770; padding-left: 0.8em">Duración: </p>
                 <div style="padding-left: 1.8em">

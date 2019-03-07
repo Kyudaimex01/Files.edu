@@ -101,10 +101,10 @@
     <div class="modal-dialog" style="color:blue">
         <div class="modal-content">
             <div class="col-md-10">
-                <div style="margin-left:0px; padding-left:0px" class="col-md-2">
+                <div class="col-md-2 modalpic-close">
                     <a onclick="showWelcome()" style="font-size: 35px; color: #002a80">&times;</a>
                 </div>
-                <div style="margin-left:20%; padding-left:20%" class="col-md-8">
+                <div class="col-md-8 modalpic-name">
                     <h3>Bienvenidos</h3>
                 </div>
             </div><br>
@@ -131,10 +131,10 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="col-md-10">
-                <div style="margin-left:0px; padding-left:0px" class="col-md-2">
+                <div class="col-md-2 modalpic-close">
                     <a onclick="showVision()" style="font-size: 35px; color: #002a80">&times;</a>
                 </div>
-                <div style="margin-left:20%; padding-left:20%" class="col-md-8">
+                <div class="col-md-8 modalpic-name">
                     <h4>Vision</h4>
                 </div>
             </div><br>
@@ -159,10 +159,10 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="col-md-10">
-                <div style="margin-left:0px; padding-left:0px" class="col-md-2">
+                <div class="col-md-2 modalpic-close">
                     <a onclick="showMission()" style="font-size: 35px; color: #002a80">&times;</a>
                 </div>
-                <div style="margin-left:20%; padding-left:20%" class="col-md-8">
+                <div class="col-md-8 modalpic-name">
                     <h4>Mision</h4>
                 </div>
             </div><br>
@@ -188,10 +188,10 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="col-md-10">
-                <div style="margin-left:0px; padding-left:0px" class="col-md-2">
+                <div class="col-md-2 modalpic-close">
                     <a onclick="showActivity()" style="font-size: 35px; color: #002a80">&times;</a>
                 </div>
-                <div style="margin-left:20%; padding-left:20%" class="col-md-8">
+                <div class="col-md-8 modalpic-name">
                     <h4>Actividad Principal</h4>
                 </div>
             </div><br>
@@ -292,10 +292,25 @@
 
 </script>
 <style>
-.modalpic-close{
-
+@media only screen and (min-width:770px){
+    .modalpic-close{
+        margin-left:0px;
+        padding-left:0px
+    }
+    .modalpic-name{
+        margin-left:20%;
+        padding-left:20%
+    }
 }
-.modalpic-name{
 
+@media only screen and (max-width:770px) and (min-width:0px){
+    .modalpic-close{
+        margin-left:0px;
+        padding-left:0px
+    }
+    .modalpic-name{
+        margin-left:0px;
+        padding-left:0px
+    }
 }
 </style>

@@ -1,6 +1,8 @@
 <?php
 use App\Notice;
 use Carbon\Carbon;
+//use DB;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,6 +21,10 @@ Route::get('/','NoticeController@get_index' )->name('index');
 Route::get('/header', function (){
     return view('layouts.partials.header');
 });
+Route::get('/adminnav', function(){
+    return view('layouts.partials.administration');
+});
+
 Route::get('/app', function(){
     return view('layouts.app');
 });
@@ -36,16 +42,18 @@ Route::get('services', function (){
 Route::get('legalization', 'CertificationController@get_legalizations');
 Route::get('certification', 'CertificationController@get_certifications');
 Route::get('apostille', 'CertificationController@get_apostille');
-Route::get('other', function (){
-    return view('other');
-});
+Route::get('other', 'CertificationController@get_others');
 
 Route::get('guide', function (){
     return view('procedure_guide');
 });
-Route::get('history', function (){
-    return view('history');
+Route::resource('history-edit', 'HistoryController');
+
+Route::get('history', function () {
+    $history = DB::table('histories')->where('id_history', 1)->first();
+    return view('history')->with('history', $history);
 });
+
 Route::get('fullcalendar', 'EventController@index');
 
 //ruta de galeria de imagenes
@@ -72,15 +80,13 @@ Route::get('/calend', function(){
 });
 
 Route::group(['middleware' => 'auth'], function () {
+    Route::resource('notices','NoticeController');
+    Route::resource('users','UserController');
+    Route::resource('media','MediaController');
+    Route::resource('roles','RoleController');
 
-Route::resource('notices','NoticeController');
-Route::resource('users','UserController');
-Route::resource('media','MediaController');
-Route::resource('roles','RoleController');
-
-Route::resource('certifications','CertificationController');
-Route::resource('procedures','ProcedureController');
-
+    Route::resource('certifications','CertificationController');
+    Route::resource('procedures','ProcedureController');
 });
 
 Route::get('othercalendar', function(){

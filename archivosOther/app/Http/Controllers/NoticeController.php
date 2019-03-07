@@ -228,7 +228,7 @@ class NoticeController extends Controller
      */
     public function destroy($id)
     {
-        dd($id);
+        //dd($id);
         $new = DB::table('notices')->where('id_new',$id)->first();
         $notice = DB::delete('delete from notices where id_new = ?',[$id]);
 

@@ -5,11 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Event;
 use MaddHatter\LaravelFullcalendar\Facades\Calendar;
+use Carbon\Carbon;
 
 class EventController extends Controller
 {
     public function index()
     {
+        $actual_date = Carbon::now()->format('d-m-Y');
+        $yDate = $actual_date->format('Y');
+        $mDate = $actual_date->format('m');
+        $dDate = $actual_date->format('d');
+
         $events = [];
         $data = Event::all();
         if($data->count()) {
@@ -28,7 +34,12 @@ class EventController extends Controller
                 );
             }
         }
+
         $calendar = Calendar::addEvents($events);
-        return view('layouts.fullcalendar', compact('calendar'));
+        return view('layouts.fullcalendar')->with('calendar', $calendar)->with('actual_date', $actual_date);
+
+        /**->with('calendar', $calendar)->with('yDate', $yDate)
+        ->with('mDate', $mDate)->with('dDate', $dDate);
+        **/
     }
 }

@@ -8,8 +8,12 @@
     margin-bottom: 0px;
     padding-bottom: 0px
 }
-
+/**
 .fc-button.fc-state-default{
+    display: none;
+}
+*/
+div.fc-view-container{
     display: none;
 }
 </style>
@@ -22,7 +26,13 @@
                 <div class="panel-heading no_margin" style="text-align: center">Calendario
                 </div>
                 <div class="panel-body no_margin">
-                    {!! $calendar->calendar() !!}
+                <p>
+                    <!--  $actual_date
+
+                     $dDate   de   $mDate   del  $yDate
+                    -->
+                </p>
+                   <!-- {!! $calendar->calendar() !!}-->
                 </div>
             </div>
 <!--

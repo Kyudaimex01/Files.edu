@@ -2,6 +2,9 @@
 
 @section('content')
 
+@include('layouts.partials.adminnav')
+@yield('administration')
+
 <div class="row" style="margin-left: 5%; margin-right: 5%">
     <h2>Listado de Noticias</h2>
 </div>

@@ -23,6 +23,11 @@
             {!! Form::textarea('requirements_procedure', $procedure->requirements_procedure, ['placeholder' => 'Escriba los requisitos del tramite', 'id' => 'ckeditor' , 'class' => 'form-control ckeditor', 'rows' => 15, 'cols' => 80]); !!}
         </div>
 
+        <div class="form-group">
+            {!! Form::label('value_procedure', '(*) Costo de la Certificacion:',['style'=> 'font-weight:bold']); !!}
+            {!! Form::text('value_procedure', $procedure->value_procedure, ['placeholder' => 'Ingresar el costo de la certificacion', 'class' => 'form-control']); !!}
+        </div>
+
         <div class="form-group" style="width: 40%">
             {!! Form::label('internal_time', 'Duracion Tramite Interno (en Hrs):',['style'=> 'font-weight:bold']) !!}
             <br><p>(dejar en blanco si no esta disponible)</p><br>
@@ -52,6 +57,12 @@
                 Legalizacion {!! Form::radio('type_pro', 'Legalizacion',true) !!} &nbsp;&nbsp;
             @else
                 Legalizacion {!! Form::radio('type_pro', 'Legalizacion',false) !!} &nbsp;&nbsp;
+            @endif
+
+            @if($procedure->type_pro == 'Otros')
+                Otros {!! Form::radio('type_pro', 'Otros',true) !!}
+            @else
+                Otros {!! Form::radio('type_pro', 'Otros',false) !!}
             @endif
 
             @if($procedure->type_pro == 'Apostilla')

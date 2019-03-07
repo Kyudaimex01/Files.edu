@@ -15,8 +15,9 @@ class CreateProceduresTable extends Migration
     {
         Schema::create('procedures', function (Blueprint $table) {
             $table->increments('id_pro');
-            $table->string('name_procedure',500);
+            $table->string('name_procedure',700);
             $table->string('requirements_procedure',10000);
+            $table->string('value_procedure',700)->nullable();
             $table->string('img_procedure',500);
             $table->integer('internal_time')->nullable();
             $table->integer('external_time')->nullable();
